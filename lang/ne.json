@@ -1,0 +1,190 @@
+{
+  "meta": {
+    "title": "अनिकित कुमार चौधरी — ब्याकइन्ड सफ्टवेयर इन्जिनियर",
+    "description": "Java र Spring Boot मा माइक्रोसर्भिस, REST API र टेलिकम-स्तरका ब्याकइन्ड प्रणाली निर्माणमा ३.५+ वर्षको अनुभव भएका सफ्टवेयर इन्जिनियर। हाल जर्मनीमा M.Sc. Applied Computer Science अध्ययनरत।",
+    "ogTitle": "अनिकित कुमार चौधरी — ब्याकइन्ड सफ्टवेयर इन्जिनियर",
+    "ogDescription": "Java, Spring Boot, माइक्रोसर्भिस र क्लाउड-रेडी API मा विशेषज्ञता भएका ब्याकइन्ड इन्जिनियर।"
+  },
+  "nav": {
+    "logo": "AKC",
+    "home": "~/गृहपृष्ठ",
+    "about": "~/मेरो-बारेमा",
+    "skills": "~/सीपहरू",
+    "experience": "~/अनुभव",
+    "education": "~/शिक्षा",
+    "projects": "~/प्रोजेक्टहरू",
+    "contact": "~/सम्पर्क",
+    "themeToggle": "डार्क/लाइट थिम बदल्नुहोस्",
+    "menuToggle": "नेभिगेसन मेनु खोल्नुहोस्",
+    "langLabel": "भाषा"
+  },
+  "hero": {
+    "eyebrow": "सफ्टवेयर इन्जिनियर — ब्याकइन्ड र डिस्ट्रिब्युटेड सिस्टम",
+    "greeting": "whoami",
+    "name": "अनिकित कुमार चौधरी",
+    "title": "ब्याकइन्ड-केन्द्रित सफ्टवेयर इन्जिनियर",
+    "tagline": "म भरपर्दो र उच्च-क्षमताका ब्याकइन्ड प्रणालीहरू निर्माण गर्छु — ५०+ लाख प्रयोगकर्ता भएका टेलिकम प्लेटफर्महरूदेखि क्लाउड-रेडी माइक्रोसर्भिस आर्किटेक्चरसम्म।",
+    "ctaResume": "CV डाउनलोड गर्नुहोस्",
+    "ctaContact": "सम्पर्क गर्नुहोस्",
+    "photoAlt": "अनिकित कुमार चौधरीको तस्बिर",
+    "scrollHint": "थप हेर्न स्क्रोल गर्नुहोस्",
+    "stat1Value": "३.५+",
+    "stat1Label": "वर्षको अनुभव",
+    "stat2Value": "५०लाख+",
+    "stat2Label": "सेवा पुगेका प्रयोगकर्ता",
+    "stat3Value": "~१५०ms",
+    "stat3Label": "हासिल गरिएको API प्रतिक्रिया समय"
+  },
+  "about": {
+    "eyebrow": "मेरो बारेमा",
+    "heading": "म को हुँ",
+    "summary": "हाल म Hochschule Schmalkalden मा M.Sc. Applied Computer Science अध्ययनरत छु र Werkstudent भूमिकाहरूको लागि योग्य छु। म JavaScript, Java, Spring Boot, माइक्रोसर्भिस आर्किटेक्चर र RESTful API मा विशेषज्ञता भएको ३.५+ वर्षको फुल-स्ट्याक विकास अनुभव भएको सफ्टवेयर इन्जिनियर हुँ। मैले इन्टरप्राइज टेलिकम्युनिकेसन र लजिस्टिक्स प्लेटफर्महरूको लागि उत्पादन-स्तरका प्रणालीहरू निर्माण गरेको छु, जसले प्रदर्शन, स्केलेबिलिटी र भरपर्दोपनामा मापनयोग्य सुधार ल्यायो — साथै मलाई सुरक्षित API डिजाइन, डाटाबेस अप्टिमाइजेसन र Docker तथा CI/CD पाइपलाइन प्रयोग गरी क्लाउड-रेडी डिप्लोयमेन्टको अनुभव छ।",
+    "factsHeading": "छोटो चिनारी",
+    "factLocationLabel": "स्थान",
+    "factLocationValue": "श्मालकाल्डेन, जर्मनी",
+    "factStudyLabel": "हालको अध्ययन",
+    "factStudyValue": "M.Sc. Applied Computer Science, Hochschule Schmalkalden",
+    "factAvailabilityLabel": "उपलब्धता",
+    "factAvailabilityValue": "Werkstudent भूमिकाहरूको लागि उपलब्ध",
+    "factLanguagesLabel": "बोल्ने भाषाहरू",
+    "factLanguagesValue": "नेपाली (मातृभाषा), अंग्रेजी (B2), हिन्दी (C1), जर्मन (A2)"
+  },
+  "skills": {
+    "eyebrow": "सीपहरू",
+    "heading": "म के-के प्रयोग गर्छु",
+    "subheading": "ब्याकइन्ड प्रणाली डिजाइन, निर्माण र डेलिभर गर्न प्रयोग गर्ने उपकरण र प्रविधिहरू।",
+    "categories": {
+      "languages": "प्रोग्रामिङ भाषाहरू",
+      "backend": "ब्याकइन्ड",
+      "frontend": "फ्रन्टइन्ड",
+      "databases": "डाटाबेस",
+      "cloud": "क्लाउड र DevOps",
+      "security": "सुरक्षा",
+      "testing": "टेस्टिङ",
+      "tools": "उपकरणहरू",
+      "methodologies": "पद्धतिहरू"
+    }
+  },
+  "experience": {
+    "eyebrow": "अनुभव",
+    "heading": "मैले कहाँ काम गरेको छु",
+    "items": [
+      {
+        "role": "सफ्टवेयर डेभलपर",
+        "company": "Pelatro Solution Pvt. Ltd.",
+        "location": "बैंगलोर, भारत",
+        "dates": "अगस्ट २०२२ — जुलाई २०२५",
+        "bullets": [
+          "५०+ लाख प्रयोगकर्ता भएका टेलिकम प्लेटफर्महरूको लागि Java 11, Spring Boot र PostgreSQL प्रयोग गरी स्केलेबल माइक्रोसर्भिसहरू डिजाइन र मर्मत गरें।",
+          "Redis डिस्ट्रिब्युटेड क्यासिङ र JPA मा N+1 क्वेरी प्याटर्न हटाएर API प्रतिक्रिया समय ~८००ms बाट ~१५०ms मा घटाएँ।",
+          "६+ तेस्रो-पक्ष बाह्य प्रणालीहरूसँग एकीकृत उच्च-उपलब्धता REST API निर्माण गरी इन्टिग्रेसन असफलता ३०% ले घटाएँ।",
+          "सुरक्षित बहु-टेनेन्ट पहुँचको लागि भूमिका-आधारित पहुँच नियन्त्रण र अडिट लगिङसहित OAuth2 + JWT प्रमाणीकरण लागू गरें।",
+          "Docker मार्फत सेवाहरू कन्टेनराइज गरें र Jenkins CI/CD पाइपलाइन मार्फत डिप्लोयमेन्ट स्वचालित गरी रिलिज साइकल समय ~२५% घटाएँ।",
+          "टेलिकम अपरेसन्स टिमको लागि KPI देखाउने रियल-टाइम एनालिटिक्स ड्यासबोर्डहरू Angular 12 र HighCharts.js प्रयोग गरी विकास गरें।",
+          "प्रोडक्सन इन्सिडेन्ट समाधानको नेतृत्व गरें र २ जुनियर इन्जिनियरहरूलाई ब्याकइन्ड र फ्रन्टइन्ड उत्कृष्ट अभ्यासमा मार्गदर्शन गरें।"
+        ],
+        "tech": ["Java 11", "Spring Boot", "PostgreSQL", "Redis", "JPA", "REST APIs", "OAuth2", "JWT", "Docker", "Jenkins", "CI/CD", "Angular 12", "HighCharts.js", "AWS"]
+      },
+      {
+        "role": "एसोसिएट एप्लिकेसन डेभलपर इन्जिनियर",
+        "company": "UNISYS Global Services",
+        "location": "बैंगलोर, भारत",
+        "dates": "अक्टोबर २०२१ — जुन २०२२",
+        "bullets": [
+          "उच्च-मात्रा वित्तीय कारोबार सम्हाल्ने इन्टरप्राइज लजिस्टिक्स र कार्गो रेभिन्यु एकाउन्टिङ मोड्युलहरू Java/Spring Boot मा विकास र मर्मत गरें।",
+          "Linux उपकरण र SQL प्रोफाइलिङ प्रयोग गरी व्यवस्थित लग विश्लेषणद्वारा प्रोडक्सन समस्या समाधान समय ~२५% घटाएँ।",
+          "Jenkins मा CI/CD सुधारमा योगदान गरी टिमको लागि डिप्लोयमेन्ट अवरोध घटाएँ।",
+          "मार्गदर्शनमा REST API एन्डपोइन्ट र ब्याकइन्ड मोड्युलहरू निर्माण गरें; JUnit सहित बग फिक्स र युनिट टेस्टिङमा योगदान गरें।",
+          "बैंकिङ/IT ग्राहकहरूको लागि Java-आधारित इन्टरप्राइज एप्लिकेसनको प्रोडक्सन समस्या विश्लेषण र डिबगिङमा सहयोग गरें।"
+        ],
+        "tech": ["Java", "Spring Boot", "SQL", "Oracle", "Stored Procedures", "JUnit", "Jenkins", "CI/CD", "Linux"]
+      }
+    ]
+  },
+  "education": {
+    "eyebrow": "शिक्षा",
+    "heading": "शैक्षिक पृष्ठभूमि",
+    "items": [
+      {
+        "degree": "M.Sc. Applied Computer Science",
+        "school": "Hochschule Schmalkalden",
+        "location": "श्मालकाल्डेन, जर्मनी",
+        "dates": "अक्टोबर २०२५ — हालसम्म"
+      },
+      {
+        "degree": "Bachelor of Engineering, कम्प्युटर विज्ञान तथा इन्जिनियरिङ",
+        "school": "Visvesvaraya Technological University (KNS Institute of Technology)",
+        "location": "भारत",
+        "dates": "सेप्टेम्बर २०१७ — जुन २०२१",
+        "extra": "अन्तिम ग्रेड: ७.८२"
+      },
+      {
+        "degree": "उच्च माध्यमिक (कक्षा १२)",
+        "school": "Hetauda School of Management & Social Science",
+        "location": "हेटौंडा, नेपाल",
+        "dates": "२०१४ — २०१६"
+      }
+    ],
+    "internshipHeading": "इन्टर्नशिप",
+    "internshipItem": {
+      "role": "इन्टर्नशिप ट्रेनी",
+      "company": "QSpiders",
+      "dates": "अप्रिल २०२१ — सेप्टेम्बर २०२१",
+      "bullets": [
+        "व्यावहारिक प्रोजेक्ट कार्यसहितको संरचित फुल-स्ट्याक विकास तालिम कार्यक्रम पूरा गरें, Java, SQL, HTML, CSS र JavaScript प्रयोग गरी एन्ड-टु-एन्ड वेब एप्लिकेसनहरू निर्माण गरें।",
+        "नर्मलाइज्ड डाटाबेस स्किमा डिजाइन गरें र CRUD अपरेसनहरू लागू गरें।",
+        "ब्याकइन्ड लजिक, रिलेसनल डाटाबेस र फ्रन्टइन्ड इन्टिग्रेसनमा आधारभूत सीपहरू विकास गरें।"
+      ]
+    }
+  },
+  "projects": {
+    "eyebrow": "प्रोजेक्टहरू",
+    "heading": "मैले बनाएका चीजहरू",
+    "subheading": "व्यावसायिक र व्यक्तिगत प्रोजेक्टहरूको मिश्रण।",
+    "liveLabel": "लाइभ",
+    "codeLabel": "कोड",
+    "items": [
+      {
+        "title": "HSM Developer Hub",
+        "subtitle": "कम्युनिटी र इभेन्ट प्लेटफर्म (जारी)",
+        "description": "Hochschule Schmalkalden का विद्यार्थीहरूको लागि इभेन्ट दर्ता, पोस्ट सिर्जना, टिप्पणी र कम्युनिटी सहभागितालाई समर्थन गर्ने ओपन-सोर्स फुल-स्ट्याक कम्युनिटी प्लेटफर्म। React, TypeScript र Tailwind CSS मा कम्पोनेन्ट-आधारित फ्रन्टइन्ड फिचरहरू निर्माण गर्दै, रियल-टाइम डाटा, प्रमाणीकरण र स्टोरेजको लागि Supabase, र स्किमा तथा माइग्रेसन व्यवस्थापनको लागि Prisma प्रयोग गर्दै।",
+        "tech": ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui", "Supabase", "Prisma", "PostgreSQL"],
+        "codeUrl": "https://github.com/anikit013/hsm-developer-hub",
+        "liveUrl": ""
+      },
+      {
+        "title": "Air Quality Index Prediction",
+        "subtitle": "KNSIT बैंगलोर",
+        "description": "वातावरणीय सेन्सर डाटाबाट वायु गुणस्तर सूचकांक मान पूर्वानुमान गर्न धेरै रिग्रेसन मोडेलहरू (Linear Regression, Random Forest, Ridge/Lasso, XGBoost) निर्माण र तुलना गरें, वास्तविक डाटाको लागि आफ्नै Python वेब स्क्र्यापर र उत्कृष्ट मोडेलको लागि Heroku मा डिप्लोय गरिएको फ्रन्टइन्डसहित।",
+        "tech": ["Python", "Jupyter Notebook", "Scikit-learn", "Random Forest", "Web Scraping", "HTML/CSS/JS"],
+        "codeUrl": "https://github.com/anikit013/Air-Quality-Index-Machine-Learning",
+        "liveUrl": ""
+      }
+    ],
+    "addMoreNote": "प्रत्येक भाषा फाइलको projects.items array मा एउटा वस्तु कपी गरेर थप प्रोजेक्ट कार्डहरू थप्नुहोस्।"
+  },
+  "contact": {
+    "eyebrow": "सम्पर्क",
+    "heading": "कुरा गरौं",
+    "subheading": "ब्याकइन्ड र फुल-स्ट्याक विकासमा Werkstudent अवसरहरूको लागि उपलब्ध छु। निःसंकोच सम्पर्क गर्नुहोस्।",
+    "emailLabel": "इमेल पठाउनुहोस्",
+    "linkedinLabel": "LinkedIn",
+    "githubLabel": "GitHub",
+    "formHeading": "सन्देश पठाउनुहोस्",
+    "formNameLabel": "नाम",
+    "formNamePlaceholder": "तपाईंको नाम",
+    "formEmailLabel": "इमेल",
+    "formEmailPlaceholder": "you@example.com",
+    "formMessageLabel": "सन्देश",
+    "formMessagePlaceholder": "तपाईं के भन्न चाहनुहुन्छ?",
+    "formSubmit": "सन्देश पठाउनुहोस्",
+    "formSending": "पठाइँदैछ…",
+    "formSuccess": "धन्यवाद — तपाईंको सन्देश पठाइयो। म चाँडै जवाफ दिनेछु।",
+    "formError": "केही गडबड भयो। कृपया पुनः प्रयास गर्नुहोस्, वा सिधै मलाई इमेल गर्नुहोस्।"
+  },
+  "footer": {
+    "tagline": "सामान्य HTML, CSS र JavaScript प्रयोग गरी निर्माण गरिएको।",
+    "backToTop": "माथि जानुहोस्",
+    "rights": "सर्वाधिकार सुरक्षित।"
+  }
+}

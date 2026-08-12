@@ -1,0 +1,190 @@
+{
+  "meta": {
+    "title": "Anikit Kumar Chaudhary — Backend Software Engineer",
+    "description": "Software-Ingenieur mit 3,5+ Jahren Erfahrung in Microservices, REST-APIs und Backend-Systemen für die Telekommunikationsbranche mit Java & Spring Boot. Aktuell M.Sc. Angewandte Informatik in Deutschland.",
+    "ogTitle": "Anikit Kumar Chaudhary — Backend Software Engineer",
+    "ogDescription": "Backend-Entwickler mit Schwerpunkt Java, Spring Boot, Microservices und cloudfähige APIs."
+  },
+  "nav": {
+    "logo": "AKC",
+    "home": "~/start",
+    "about": "~/ueber-mich",
+    "skills": "~/faehigkeiten",
+    "experience": "~/erfahrung",
+    "education": "~/ausbildung",
+    "projects": "~/projekte",
+    "contact": "~/kontakt",
+    "themeToggle": "Hell-/Dunkelmodus umschalten",
+    "menuToggle": "Navigationsmenü umschalten",
+    "langLabel": "Sprache"
+  },
+  "hero": {
+    "eyebrow": "Software Engineer — Backend & verteilte Systeme",
+    "greeting": "whoami",
+    "name": "Anikit Kumar Chaudhary",
+    "title": "Backend-fokussierter Software Engineer",
+    "tagline": "Ich entwerfe und entwickle zuverlässige, leistungsstarke Backend-Systeme — von Telekommunikationsplattformen mit 5 Mio.+ Nutzern bis hin zu cloudfähigen Microservices-Architekturen.",
+    "ctaResume": "Lebenslauf herunterladen",
+    "ctaContact": "Kontakt aufnehmen",
+    "photoAlt": "Porträt von Anikit Kumar Chaudhary",
+    "scrollHint": "Zum Entdecken scrollen",
+    "stat1Value": "3,5+",
+    "stat1Label": "Jahre Erfahrung",
+    "stat2Value": "5 Mio.+",
+    "stat2Label": "Betreute Nutzer",
+    "stat3Value": "~150ms",
+    "stat3Label": "Erreichte API-Antwortzeit"
+  },
+  "about": {
+    "eyebrow": "Über mich",
+    "heading": "Wer ich bin",
+    "summary": "Ich studiere aktuell M.Sc. Angewandte Informatik an der Hochschule Schmalkalden und stehe für Werkstudentenstellen zur Verfügung. Ich bin Software Engineer mit 3,5+ Jahren Berufserfahrung in der Full-Stack-Entwicklung, spezialisiert auf JavaScript, Java, Spring Boot, Microservices-Architektur und RESTful APIs. Ich habe produktionsreife Systeme für Telekommunikations- und Logistikplattformen entwickelt und dabei messbare Verbesserungen bei Performance, Skalierbarkeit und Zuverlässigkeit erzielt — zudem habe ich Erfahrung in sicherem API-Design, Datenbankoptimierung und cloudfähigen Deployments mit Docker und CI/CD-Pipelines.",
+    "factsHeading": "Kurzprofil",
+    "factLocationLabel": "Standort",
+    "factLocationValue": "Schmalkalden, Deutschland",
+    "factStudyLabel": "Aktuelles Studium",
+    "factStudyValue": "M.Sc. Angewandte Informatik, Hochschule Schmalkalden",
+    "factAvailabilityLabel": "Verfügbarkeit",
+    "factAvailabilityValue": "Offen für Werkstudentenstellen",
+    "factLanguagesLabel": "Sprachkenntnisse",
+    "factLanguagesValue": "Nepali (Muttersprache), Englisch (B2), Hindi (C1), Deutsch (A2)"
+  },
+  "skills": {
+    "eyebrow": "Fähigkeiten",
+    "heading": "Womit ich arbeite",
+    "subheading": "Werkzeuge und Technologien, mit denen ich Backend-Systeme entwerfe, baue und ausliefere.",
+    "categories": {
+      "languages": "Programmiersprachen",
+      "backend": "Backend",
+      "frontend": "Frontend",
+      "databases": "Datenbanken",
+      "cloud": "Cloud & DevOps",
+      "security": "Sicherheit",
+      "testing": "Testing",
+      "tools": "Werkzeuge",
+      "methodologies": "Methoden"
+    }
+  },
+  "experience": {
+    "eyebrow": "Erfahrung",
+    "heading": "Wo ich gearbeitet habe",
+    "items": [
+      {
+        "role": "Software Developer",
+        "company": "Pelatro Solution Pvt. Ltd.",
+        "location": "Bangalore, Indien",
+        "dates": "Aug 2022 — Jul 2025",
+        "bullets": [
+          "Skalierbare Microservices mit Java 11, Spring Boot und PostgreSQL für Telekommunikationsplattformen mit 5 Mio.+ Nutzern entworfen und betreut.",
+          "API-Antwortzeit durch verteiltes Redis-Caching und Beseitigung von N+1-Abfragemustern in JPA von ~800ms auf ~150ms reduziert.",
+          "Hochverfügbare REST-APIs mit Anbindung an 6+ externe Drittsysteme entwickelt und Integrationsfehler um 30% reduziert.",
+          "OAuth2- + JWT-Authentifizierung mit rollenbasierter Zugriffskontrolle und Audit-Logging für sicheren Mandantenzugriff implementiert.",
+          "Services mit Docker containerisiert und Deployments über Jenkins-CI/CD-Pipelines automatisiert, Release-Zyklus um ~25% verkürzt.",
+          "Echtzeit-Analyse-Dashboards mit Angular 12 und HighCharts.js für KPI-Visualisierung im Telekom-Betrieb entwickelt.",
+          "Bearbeitung von Produktionsvorfällen geleitet und 2 Junior-Entwickler in Backend- und Frontend-Best-Practices betreut."
+        ],
+        "tech": ["Java 11", "Spring Boot", "PostgreSQL", "Redis", "JPA", "REST APIs", "OAuth2", "JWT", "Docker", "Jenkins", "CI/CD", "Angular 12", "HighCharts.js", "AWS"]
+      },
+      {
+        "role": "Associate Application Developer Engineer",
+        "company": "UNISYS Global Services",
+        "location": "Bangalore, Indien",
+        "dates": "Okt 2021 — Jun 2022",
+        "bullets": [
+          "Module für Logistik- und Frachterlösbuchhaltung in Java/Spring Boot für ein hohes Volumen an Finanztransaktionen entwickelt und betreut.",
+          "Bearbeitungszeit für Produktionsprobleme durch systematische Log-Analyse mit Linux-Tools und SQL-Profiling um ~25% reduziert.",
+          "An CI/CD-Verbesserungen in Jenkins mitgewirkt und dadurch Deployment-Hürden für das Team verringert.",
+          "REST-API-Endpunkte und Backend-Module unter Anleitung entwickelt; an Bugfixes und Unit-Tests mit JUnit mitgewirkt.",
+          "Produktionsprobleme analysiert und beim Debugging Java-basierter Unternehmensanwendungen für Banking-/IT-Kunden unterstützt."
+        ],
+        "tech": ["Java", "Spring Boot", "SQL", "Oracle", "Stored Procedures", "JUnit", "Jenkins", "CI/CD", "Linux"]
+      }
+    ]
+  },
+  "education": {
+    "eyebrow": "Ausbildung",
+    "heading": "Akademischer Werdegang",
+    "items": [
+      {
+        "degree": "M.Sc. Angewandte Informatik",
+        "school": "Hochschule Schmalkalden",
+        "location": "Schmalkalden, Deutschland",
+        "dates": "Okt 2025 — Heute"
+      },
+      {
+        "degree": "Bachelor of Engineering, Informatik",
+        "school": "Visvesvaraya Technological University (KNS Institute of Technology)",
+        "location": "Indien",
+        "dates": "Sep 2017 — Jun 2021",
+        "extra": "Abschlussnote: 7,82"
+      },
+      {
+        "degree": "Höhere Sekundarstufe (XII)",
+        "school": "Hetauda School of Management & Social Science",
+        "location": "Hetauda, Nepal",
+        "dates": "2014 — 2016"
+      }
+    ],
+    "internshipHeading": "Praktikum",
+    "internshipItem": {
+      "role": "Praktikant",
+      "company": "QSpiders",
+      "dates": "Apr 2021 — Sep 2021",
+      "bullets": [
+        "Strukturiertes Full-Stack-Entwicklungstraining mit praktischer Projektarbeit absolviert und End-to-End-Webanwendungen mit Java, SQL, HTML, CSS und JavaScript entwickelt.",
+        "Normalisierte Datenbankschemata entworfen und CRUD-Operationen implementiert.",
+        "Grundlegende Kenntnisse in Backend-Logik, relationalen Datenbanken und Frontend-Integration erworben."
+      ]
+    }
+  },
+  "projects": {
+    "eyebrow": "Projekte",
+    "heading": "Was ich gebaut habe",
+    "subheading": "Eine Mischung aus beruflichen und privaten Projekten.",
+    "liveLabel": "Live",
+    "codeLabel": "Code",
+    "items": [
+      {
+        "title": "HSM Developer Hub",
+        "subtitle": "Community- & Event-Plattform (laufend)",
+        "description": "Eine Open-Source-Full-Stack-Community-Plattform für Studierende der Hochschule Schmalkalden mit Event-Anmeldung, Beitragserstellung, Kommentaren und Community-Funktionen. Entwicklung komponentenbasierter Frontend-Features mit React, TypeScript und Tailwind CSS, mit Supabase für Echtzeitdaten, Auth und Storage sowie Prisma für Schema und Migrationen.",
+        "tech": ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui", "Supabase", "Prisma", "PostgreSQL"],
+        "codeUrl": "https://github.com/anikit013/hsm-developer-hub",
+        "liveUrl": ""
+      },
+      {
+        "title": "Air Quality Index Prediction",
+        "subtitle": "KNSIT Bangalore",
+        "description": "Mehrere Regressionsmodelle (Linear Regression, Random Forest, Ridge/Lasso, XGBoost) zur Vorhersage von Luftqualitätsindex-Werten aus Umweltsensordaten entwickelt und verglichen, inklusive eines eigenen Python-Web-Scrapers für reale Daten und eines auf Heroku bereitgestellten Frontends für das beste Modell.",
+        "tech": ["Python", "Jupyter Notebook", "Scikit-learn", "Random Forest", "Web Scraping", "HTML/CSS/JS"],
+        "codeUrl": "https://github.com/anikit013/Air-Quality-Index-Machine-Learning",
+        "liveUrl": ""
+      }
+    ],
+    "addMoreNote": "Weitere Projektkarten hinzufügen, indem ein Eintrag im projects.items-Array jeder Sprachdatei kopiert wird."
+  },
+  "contact": {
+    "eyebrow": "Kontakt",
+    "heading": "Lass uns sprechen",
+    "subheading": "Offen für Werkstudentenstellen im Bereich Backend- und Full-Stack-Entwicklung. Melde dich gerne bei mir.",
+    "emailLabel": "E-Mail senden",
+    "linkedinLabel": "LinkedIn",
+    "githubLabel": "GitHub",
+    "formHeading": "Nachricht senden",
+    "formNameLabel": "Name",
+    "formNamePlaceholder": "Dein Name",
+    "formEmailLabel": "E-Mail",
+    "formEmailPlaceholder": "du@beispiel.de",
+    "formMessageLabel": "Nachricht",
+    "formMessagePlaceholder": "Was möchtest du mir sagen?",
+    "formSubmit": "Nachricht senden",
+    "formSending": "Wird gesendet…",
+    "formSuccess": "Danke — deine Nachricht wurde gesendet. Ich melde mich bald.",
+    "formError": "Etwas ist schiefgelaufen. Bitte versuche es erneut oder schreib mir direkt eine E-Mail."
+  },
+  "footer": {
+    "tagline": "Erstellt mit reinem HTML, CSS & JavaScript.",
+    "backToTop": "Nach oben",
+    "rights": "Alle Rechte vorbehalten."
+  }
+}
