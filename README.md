@@ -16,13 +16,14 @@ plain HTML, CSS and vanilla JavaScript — no build tools, no frameworks.
 │   ├── js/
 │   │   └── main.js          ← language switching, theme, animations, form
 │   ├── img/
-│   │   ├── profile.jpg       ← ADD YOUR OWN PHOTO HERE (see img/README.txt)
+│   │   ├── hero-portrait.png ← hero photo
+│   │   ├── about-portrait.png← About photo
+│   │   ├── projects/         ← project thumbnails
 │   │   └── README.txt
-│   └── resume.pdf            ← the "Download CV" file (currently your CV PDF —
+│   └── Anikit_CV.pdf         ← the "Download CV" file (currently your CV PDF —
 │                                 swap it for a polished export whenever you like)
 └── lang/
     ├── en.json                ← English text (default)
     ├── ne.json                ← Nepali text
     └── de.json                ← German text
 ```
-

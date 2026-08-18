@@ -24,6 +24,7 @@
     "name": "Anikit Kumar Chaudhary",
     "title": "Java & Spring Boot · Backend & Full-Stack",
     "tagline": "Building reliable microservices and REST APIs with AWS, Docker and CI/CD — from telecom platforms serving 5M+ subscribers to cloud-ready product systems.",
+    "availability": "Open to Werkstudent & part-time opportunities in Germany",
     "ctaResume": "Download CV",
     "ctaContact": "Contact Me",
     "photoAlt": "Portrait of Anikit Kumar Chaudhary",
@@ -39,6 +40,8 @@
     "eyebrow": "About",
     "heading": "Who I am",
     "summary": "I'm a software engineer with 3.5+ years of industry experience building backend and full-stack applications for enterprise telecommunications and logistics platforms. My focus is Java, Spring Boot, REST APIs, microservices, PostgreSQL, Redis, React and TypeScript. I have worked on systems serving millions of users, improved API performance, built secure OAuth2/JWT APIs, and delivered cloud-ready deployments with Docker, Jenkins and AWS. I am pursuing an M.Sc. in Applied Computer Science at Hochschule Schmalkalden and am interested in Werkstudent and part-time software engineering opportunities.",
+    "recruiterLabel": "What I bring",
+    "recruiterValue": "Production experience across distributed backend systems, measurable performance gains, and a practical full-stack mindset.",
     "photoAlt": "Portrait of Anikit Kumar Chaudhary",
     "factsHeading": "Quick facts",
     "factLocationLabel": "Location",
@@ -190,6 +193,36 @@
         "tech": ["Python", "Jupyter Notebook", "Scikit-learn", "Linear Regression", "Random Forest", "Ridge/Lasso", "XGBoost", "Web Scraping", "HTML/CSS/JS"],
         "image": "assets/img/projects/air-quality-prediction.png",
         "codeUrl": "https://github.com/anikit013/Air-Quality-Index-Machine-Learning",
+        "liveUrl": ""
+      },
+      {
+        "title": "Real-Time Telecommunications Analytics Platform",
+        "subtitle": "Professional project · Pelatro",
+        "dates": "2022 — 2025",
+        "description": "Designed a cloud-ready analytics system supporting real-time monitoring for millions of telecom users. Built distributed caching layers for high-concurrency data access and interactive KPI dashboards for operations teams.",
+        "tech": ["Java", "Spring Boot", "PostgreSQL", "Redis", "Angular 12", "HighCharts.js", "AWS"],
+        "image": "assets/img/projects/telecom-analytics.png",
+        "codeUrl": "",
+        "liveUrl": ""
+      },
+      {
+        "title": "Microservices Migration Initiative",
+        "subtitle": "Professional project · Pelatro",
+        "dates": "2022 — 2025",
+        "description": "Contributed to decomposing a legacy monolithic application into independently deployable microservices. Containerised services with Docker and established automated deployment workflows using Jenkins and GitHub Actions on AWS.",
+        "tech": ["Java", "Spring Boot", "Microservices", "Docker", "Jenkins", "GitHub Actions", "AWS"],
+        "image": "assets/img/projects/microservices-migration.png",
+        "codeUrl": "",
+        "liveUrl": ""
+      },
+      {
+        "title": "Secure Authentication Framework",
+        "subtitle": "Professional project · Pelatro",
+        "dates": "2022 — 2025",
+        "description": "Designed and implemented an OAuth2 and JWT authentication framework with role-based access control and audit logging, securing access across a multi-service backend environment.",
+        "tech": ["Spring Boot", "OAuth2", "JWT", "RBAC", "REST APIs", "PostgreSQL"],
+        "image": "assets/img/projects/secure-authentication.png",
+        "codeUrl": "",
         "liveUrl": ""
       }
     ],

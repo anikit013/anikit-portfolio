@@ -77,12 +77,17 @@
         <p class="role-title" data-i18n="hero.title">Full-stack Software Engineer</p>
         <p class="tagline" data-i18n="hero.tagline">I design and ship reliable, high-throughput backend systems.</p>
 
+        <div class="availability-badge">
+          <span class="availability-dot" aria-hidden="true"></span>
+          <span data-i18n="hero.availability">Open to Werkstudent &amp; part-time opportunities in Germany</span>
+        </div>
+
         <div class="hero-cta">
-          <a class="btn btn-primary" href="assets/Anikit_CV.pdfata-i18n="hero.ctaResume">Download CV</a>
+          <a class="btn btn-primary" href="assets/Anikit_CV.pdf" download data-i18n="hero.ctaResume">Download CV</a>
           <a class="btn btn-ghost" href="#contact" data-i18n="hero.ctaContact">Contact Me</a>
         </div>
 
-      <div class="hero-stats">
+        <div class="hero-stats">
           <div class="stat"><div class="stat-value count-up" data-i18n="hero.stat1Value">3.5+</div><div class="stat-label" data-i18n="hero.stat1Label">Years of experience</div></div>
           <div class="stat"><div class="stat-value count-up" data-i18n="hero.stat2Value">5M+</div><div class="stat-label" data-i18n="hero.stat2Label">Subscribers served</div></div>
           <div class="stat"><div class="stat-value count-up" data-i18n="hero.stat3Value">~150ms</div><div class="stat-label" data-i18n="hero.stat3Label">API response time achieved</div></div>
@@ -123,9 +128,10 @@
           <p data-i18n="about.summary">Summary goes here.</p>
         </div>
 
-        <!-- <figure class="about-portrait reveal">
-          <img src="assets/img/about-portrait.png" alt="" data-i18n-attr="alt:about.photoAlt">
-        </figure> -->
+        <div class="recruiter-note reveal">
+          <span class="recruiter-note-label" data-i18n="about.recruiterLabel">What I bring</span>
+          <p data-i18n="about.recruiterValue">Production experience across distributed backend systems, measurable performance gains, and a practical full-stack mindset.</p>
+        </div>
 
         <div class="facts-card reveal">
           <h3 data-i18n="about.factsHeading">Quick facts</h3>
@@ -189,7 +195,9 @@
         <p data-i18n="projects.subheading">A mix of professional and personal projects.</p>
       </div>
 
-      
+      <div class="projects-grid" id="projects-grid"><!-- populated by JavaScript --></div>
+      <p class="projects-note reveal" data-i18n="projects.addMoreNote"></p>
+    </div>
   </section>
 
   <section id="contact">
@@ -249,7 +257,7 @@
 
 <footer class="site-footer">
   <div class="container">
-    <p class="footer-tagline"><span id="footer-year">2026</span> Anikit Kumar Chaudhary — <span data-i18n="contact.githubLabel">.</span> <span data-i18n="footer.rights">All rights reserved.</span></p>
+    <p class="footer-tagline"><span id="footer-year">2026</span> Anikit Kumar Chaudhary — <span data-i18n="footer.tagline">Built with plain HTML, CSS &amp; JavaScript.</span> <span data-i18n="footer.rights">All rights reserved.</span></p>
 
     <div class="footer-links">
       <div class="footer-social">
