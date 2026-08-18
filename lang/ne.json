@@ -1,9 +1,9 @@
 {
   "meta": {
-    "title": "अनिकित कुमार चौधरी — ब्याकइन्ड सफ्टवेयर इन्जिनियर",
-    "description": "Java र Spring Boot मा माइक्रोसर्भिस, REST API र टेलिकम-स्तरका ब्याकइन्ड प्रणाली निर्माणमा ३.५+ वर्षको अनुभव भएका सफ्टवेयर इन्जिनियर। हाल जर्मनीमा M.Sc. Applied Computer Science अध्ययनरत।",
-    "ogTitle": "अनिकित कुमार चौधरी — ब्याकइन्ड सफ्टवेयर इन्जिनियर",
-    "ogDescription": "Java, Spring Boot, माइक्रोसर्भिस र क्लाउड-रेडी API मा विशेषज्ञता भएका ब्याकइन्ड इन्जिनियर।"
+    "title": "अनिकित कुमार चौधरी — सफ्टवेयर इन्जिनियर | Java र Spring Boot",
+    "description": "Java र Spring Boot मा इन्टरप्राइज टेलिकम्युनिकेसन तथा लजिस्टिक्सका लागि ब्याकइन्ड र फुल-स्ट्याक एप्लिकेसन निर्माणमा ३.५+ वर्षको अनुभव भएका सफ्टवेयर इन्जिनियर। जर्मनीमा M.Sc. Applied Computer Science अध्ययनरत।",
+    "ogTitle": "अनिकित कुमार चौधरी — सफ्टवेयर इन्जिनियर | Java र Spring Boot",
+    "ogDescription": "Java, Spring Boot, माइक्रोसर्भिस, REST API, AWS, Docker र CI/CD मा विशेषज्ञता भएका सफ्टवेयर इन्जिनियर।"
   },
   "nav": {
     "logo": "AKC",
@@ -19,11 +19,11 @@
     "langLabel": "भाषा"
   },
   "hero": {
-    "eyebrow": "सफ्टवेयर इन्जिनियर — ब्याकइन्ड र डिस्ट्रिब्युटेड सिस्टम",
+    "eyebrow": "सफ्टवेयर इन्जिनियर",
     "greeting": "whoami",
     "name": "अनिकित कुमार चौधरी",
-    "title": "ब्याकइन्ड-केन्द्रित सफ्टवेयर इन्जिनियर",
-    "tagline": "म भरपर्दो र उच्च-क्षमताका ब्याकइन्ड प्रणालीहरू निर्माण गर्छु — ५०+ लाख प्रयोगकर्ता भएका टेलिकम प्लेटफर्महरूदेखि क्लाउड-रेडी माइक्रोसर्भिस आर्किटेक्चरसम्म।",
+    "title": "Java र Spring Boot · ब्याकइन्ड र फुल-स्ट्याक",
+    "tagline": "AWS, Docker र CI/CD सहित भरपर्दो माइक्रोसर्भिस र REST API निर्माण गर्छु — ५०+ लाख प्रयोगकर्ता भएका टेलिकम प्लेटफर्मदेखि cloud-ready product system सम्म।",
     "ctaResume": "CV डाउनलोड गर्नुहोस्",
     "ctaContact": "सम्पर्क गर्नुहोस्",
     "photoAlt": "अनिकित कुमार चौधरीको तस्बिर",
@@ -38,16 +38,19 @@
   "about": {
     "eyebrow": "मेरो बारेमा",
     "heading": "म को हुँ",
-    "summary": "हाल म Hochschule Schmalkalden मा M.Sc. Applied Computer Science अध्ययनरत छु र Werkstudent भूमिकाहरूको लागि योग्य छु। म JavaScript, Java, Spring Boot, माइक्रोसर्भिस आर्किटेक्चर र RESTful API मा विशेषज्ञता भएको ३.५+ वर्षको फुल-स्ट्याक विकास अनुभव भएको सफ्टवेयर इन्जिनियर हुँ। मैले इन्टरप्राइज टेलिकम्युनिकेसन र लजिस्टिक्स प्लेटफर्महरूको लागि उत्पादन-स्तरका प्रणालीहरू निर्माण गरेको छु, जसले प्रदर्शन, स्केलेबिलिटी र भरपर्दोपनामा मापनयोग्य सुधार ल्यायो — साथै मलाई सुरक्षित API डिजाइन, डाटाबेस अप्टिमाइजेसन र Docker तथा CI/CD पाइपलाइन प्रयोग गरी क्लाउड-रेडी डिप्लोयमेन्टको अनुभव छ।",
+    "summary": "म इन्टरप्राइज टेलिकम्युनिकेसन र लजिस्टिक्स प्लेटफर्मका लागि ब्याकइन्ड र फुल-स्ट्याक एप्लिकेसन निर्माणमा ३.५+ वर्षको अनुभव भएको सफ्टवेयर इन्जिनियर हुँ। मेरो केन्द्र Java, Spring Boot, REST API, माइक्रोसर्भिस, PostgreSQL, Redis, React र TypeScript हो। लाखौं प्रयोगकर्ता सेवा दिने प्रणालीमा काम गरेको छु, API प्रदर्शन सुधार गरेको छु, OAuth2/JWT सुरक्षित API निर्माण गरेको छु र Docker, Jenkins तथा AWS सहित cloud-ready deployment दिएको छु। Hochschule Schmalkalden मा M.Sc. Applied Computer Science पढ्दै Werkstudent र part-time software engineering अवसर खोज्दैछु।",
+    "photoAlt": "अनिकित कुमार चौधरीको तस्बिर",
     "factsHeading": "छोटो चिनारी",
     "factLocationLabel": "स्थान",
     "factLocationValue": "श्मालकाल्डेन, जर्मनी",
     "factStudyLabel": "हालको अध्ययन",
     "factStudyValue": "M.Sc. Applied Computer Science, Hochschule Schmalkalden",
     "factAvailabilityLabel": "उपलब्धता",
-    "factAvailabilityValue": "Werkstudent भूमिकाहरूको लागि उपलब्ध",
+    "factAvailabilityValue": "Werkstudent / part-time अवसर खोज्दै",
     "factLanguagesLabel": "बोल्ने भाषाहरू",
-    "factLanguagesValue": "नेपाली (मातृभाषा), अंग्रेजी (B2), हिन्दी (C1), जर्मन (A2)"
+    "factLanguagesValue": "नेपाली (मातृभाषा), अंग्रेजी (पूर्ण व्यावसायिक), हिन्दी (व्यावसायिक), जर्मन (सीमित कार्यस्तर)",
+    "factCertificationsLabel": "प्रमाणपत्रहरू",
+    "factCertificationsValue": "CNSS Certified Network Security Specialist · Introduction to Cybersecurity · Cyber@ANZ Program · Introduction to Programming Using JavaScript · Software Engineering Virtual Experience"
   },
   "skills": {
     "eyebrow": "सीपहरू",
@@ -83,7 +86,7 @@
           "टेलिकम अपरेसन्स टिमको लागि KPI देखाउने रियल-टाइम एनालिटिक्स ड्यासबोर्डहरू Angular 12 र HighCharts.js प्रयोग गरी विकास गरें।",
           "प्रोडक्सन इन्सिडेन्ट समाधानको नेतृत्व गरें र २ जुनियर इन्जिनियरहरूलाई ब्याकइन्ड र फ्रन्टइन्ड उत्कृष्ट अभ्यासमा मार्गदर्शन गरें।"
         ],
-        "tech": ["Java 11", "Spring Boot", "PostgreSQL", "Redis", "JPA", "REST APIs", "OAuth2", "JWT", "Docker", "Jenkins", "CI/CD", "Angular 12", "HighCharts.js", "AWS"]
+        "tech": ["Java 11", "Spring Boot", "PostgreSQL", "Redis", "JPA", "REST APIs", "OAuth2", "JWT", "Docker", "Jenkins", "CI/CD", "Angular 12", "HighCharts.js", "AWS (EC2, S3, Lambda)"]
       },
       {
         "role": "एसोसिएट एप्लिकेसन डेभलपर इन्जिनियर",
@@ -97,7 +100,7 @@
           "मार्गदर्शनमा REST API एन्डपोइन्ट र ब्याकइन्ड मोड्युलहरू निर्माण गरें; JUnit सहित बग फिक्स र युनिट टेस्टिङमा योगदान गरें।",
           "बैंकिङ/IT ग्राहकहरूको लागि Java-आधारित इन्टरप्राइज एप्लिकेसनको प्रोडक्सन समस्या विश्लेषण र डिबगिङमा सहयोग गरें।"
         ],
-        "tech": ["Java", "Spring Boot", "SQL", "Oracle", "Stored Procedures", "JUnit", "Jenkins", "CI/CD", "Linux"]
+        "tech": ["Java", "Spring Boot", "SQL", "Oracle", "Stored Procedures", "JUnit", "Jenkins", "CI/CD", "Linux", "Log Analysis", "REST APIs"]
       }
     ]
   },
@@ -109,7 +112,7 @@
         "degree": "M.Sc. Applied Computer Science",
         "school": "Hochschule Schmalkalden",
         "location": "श्मालकाल्डेन, जर्मनी",
-        "dates": "अक्टोबर २०२५ — हालसम्म"
+        "dates": "अक्टोबर २०२५ — अक्टोबर २०२७"
       },
       {
         "degree": "Bachelor of Engineering, कम्प्युटर विज्ञान तथा इन्जिनियरिङ",
@@ -122,7 +125,8 @@
         "degree": "उच्च माध्यमिक (कक्षा १२)",
         "school": "Hetauda School of Management & Social Science",
         "location": "हेटौंडा, नेपाल",
-        "dates": "२०१४ — २०१६"
+        "dates": "२०१४ — २०१६",
+        "website": "https://hsm.edu.np"
       }
     ],
     "internshipHeading": "इन्टर्नशिप",
@@ -134,7 +138,8 @@
         "व्यावहारिक प्रोजेक्ट कार्यसहितको संरचित फुल-स्ट्याक विकास तालिम कार्यक्रम पूरा गरें, Java, SQL, HTML, CSS र JavaScript प्रयोग गरी एन्ड-टु-एन्ड वेब एप्लिकेसनहरू निर्माण गरें।",
         "नर्मलाइज्ड डाटाबेस स्किमा डिजाइन गरें र CRUD अपरेसनहरू लागू गरें।",
         "ब्याकइन्ड लजिक, रिलेसनल डाटाबेस र फ्रन्टइन्ड इन्टिग्रेसनमा आधारभूत सीपहरू विकास गरें।"
-      ]
+      ],
+      "tech": ["Java", "SQL", "HTML5", "CSS3", "JavaScript", "Database Schema Design", "CRUD Operations"]
     }
   },
   "projects": {
@@ -146,18 +151,52 @@
     "items": [
       {
         "title": "HSM Developer Hub",
-        "subtitle": "कम्युनिटी र इभेन्ट प्लेटफर्म (जारी)",
-        "description": "Hochschule Schmalkalden का विद्यार्थीहरूको लागि इभेन्ट दर्ता, पोस्ट सिर्जना, टिप्पणी र कम्युनिटी सहभागितालाई समर्थन गर्ने ओपन-सोर्स फुल-स्ट्याक कम्युनिटी प्लेटफर्म। React, TypeScript र Tailwind CSS मा कम्पोनेन्ट-आधारित फ्रन्टइन्ड फिचरहरू निर्माण गर्दै, रियल-टाइम डाटा, प्रमाणीकरण र स्टोरेजको लागि Supabase, र स्किमा तथा माइग्रेसन व्यवस्थापनको लागि Prisma प्रयोग गर्दै।",
-        "tech": ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui", "Supabase", "Prisma", "PostgreSQL"],
+        "subtitle": "ओपन-सोर्स योगदानकर्ता · Hochschule Schmalkalden",
+        "dates": "फेब्रुअरी २०२६ — हालसम्म",
+        "description": "Hochschule Schmalkalden का विद्यार्थीहरूका लागि इभेन्ट दर्ता, पोस्ट सिर्जना, टिप्पणी र कम्युनिटी सहभागिता सहयोग गर्ने ओपन-सोर्स फुल-स्ट्याक प्लेटफर्ममा योगदान गर्दैछु। React, TypeScript र Tailwind CSS मा कम्पोनेन्ट-आधारित सुविधाहरू निर्माण गर्दै, रियल-टाइम डाटा, प्रमाणीकरण र स्टोरेजका लागि Supabase, तथा स्किमा र माइग्रेसनका लागि Prisma एकीकृत गर्दैछु। संरचित Git commit, feature work, bug fix र UI सुधारमार्फत सहकार्य गर्दैछु।",
+        "tech": ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui", "Supabase", "Prisma", "PostgreSQL", "Git"],
+        "image": "assets/img/projects/hsm-developer-hub.png",
         "codeUrl": "https://github.com/anikit013/hsm-developer-hub",
         "liveUrl": ""
       },
       {
         "title": "Air Quality Index Prediction",
         "subtitle": "KNSIT बैंगलोर",
-        "description": "वातावरणीय सेन्सर डाटाबाट वायु गुणस्तर सूचकांक मान पूर्वानुमान गर्न धेरै रिग्रेसन मोडेलहरू (Linear Regression, Random Forest, Ridge/Lasso, XGBoost) निर्माण र तुलना गरें, वास्तविक डाटाको लागि आफ्नै Python वेब स्क्र्यापर र उत्कृष्ट मोडेलको लागि Heroku मा डिप्लोय गरिएको फ्रन्टइन्डसहित।",
-        "tech": ["Python", "Jupyter Notebook", "Scikit-learn", "Random Forest", "Web Scraping", "HTML/CSS/JS"],
+        "dates": "फेब्रुअरी २०२१ — मे २०२१",
+        "description": "वातावरणीय सेन्सर डाटाबाट वायु गुणस्तर सूचकांकको पूर्वानुमानका लागि Linear Regression, Random Forest, Ridge/Lasso र XGBoost मोडेल निर्माण र तुलना गरें। वास्तविक डाटाका लागि Python web scraper विकास गरें, feature analysis र model evaluation गरें, र उत्कृष्ट मोडेललाई frontend interface सहित Heroku मा deploy गरें।",
+        "tech": ["Python", "Jupyter Notebook", "Scikit-learn", "Linear Regression", "Random Forest", "Ridge/Lasso", "XGBoost", "Web Scraping", "HTML/CSS/JS"],
+        "image": "assets/img/projects/air-quality-prediction.png",
         "codeUrl": "https://github.com/anikit013/Air-Quality-Index-Machine-Learning",
+        "liveUrl": ""
+      },
+      {
+        "title": "रियल-टाइम दूरसञ्चार एनालिटिक्स प्लेटफर्म",
+        "subtitle": "व्यावसायिक प्रोजेक्ट · Pelatro Solution",
+        "dates": "२०२२ — २०२५",
+        "description": "लाखौं दूरसञ्चार प्रयोगकर्ताका लागि रियल-टाइम निगरानी सहयोग गर्ने cloud-ready analytics प्रणाली डिजाइन गरें। उच्च concurrency मा data access का लागि distributed caching layer र operations team का लागि interactive KPI dashboard विकास गरें।",
+        "tech": ["Java 11", "Spring Boot", "PostgreSQL", "Redis", "Angular 12", "HighCharts.js", "AWS (EC2, S3, Lambda)"],
+        "image": "assets/img/projects/telecom-analytics.png",
+        "codeUrl": "",
+        "liveUrl": ""
+      },
+      {
+        "title": "माइक्रोसर्भिस माइग्रेसन पहल",
+        "subtitle": "व्यावसायिक प्रोजेक्ट · Pelatro Solution",
+        "dates": "२०२२ — २०२५",
+        "description": "पुरानो monolithic application लाई स्वतन्त्र रूपमा deploy गर्न मिल्ने microservices मा विभाजन गर्ने कार्यको नेतृत्व गरें। Docker बाट service containerise गरें र AWS मा Jenkins तथा GitHub Actions प्रयोग गरी automated deployment workflow स्थापना गरें।",
+        "tech": ["Java 11", "Spring Boot", "Microservices", "Docker", "Jenkins", "GitHub Actions", "AWS"],
+        "image": "assets/img/projects/microservices-migration.png",
+        "codeUrl": "",
+        "liveUrl": ""
+      },
+      {
+        "title": "सुरक्षित प्रमाणीकरण फ्रेमवर्क",
+        "subtitle": "व्यावसायिक प्रोजेक्ट · Pelatro Solution",
+        "dates": "२०२२ — २०२५",
+        "description": "role-based access control र audit logging सहित OAuth2 + JWT आधारित प्रमाणीकरण फ्रेमवर्क डिजाइन र कार्यान्वयन गरें, जसले multi-service backend environment भरि पहुँच सुरक्षित बनायो।",
+        "tech": ["Spring Boot", "OAuth2", "JWT", "RBAC", "REST APIs", "PostgreSQL"],
+        "image": "assets/img/projects/secure-authentication.png",
+        "codeUrl": "",
         "liveUrl": ""
       }
     ],
@@ -167,6 +206,7 @@
     "eyebrow": "सम्पर्क",
     "heading": "कुरा गरौं",
     "subheading": "ब्याकइन्ड र फुल-स्ट्याक विकासमा Werkstudent अवसरहरूको लागि उपलब्ध छु। निःसंकोच सम्पर्क गर्नुहोस्।",
+    "phoneLabel": "फोन गर्नुहोस्",
     "emailLabel": "इमेल पठाउनुहोस्",
     "linkedinLabel": "LinkedIn",
     "githubLabel": "GitHub",

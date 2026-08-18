@@ -26,7 +26,7 @@
     { key: "databases",     items: ["PostgreSQL", "Oracle", "Redis"] },
     { key: "cloud",         items: ["Docker", "Jenkins", "GitHub Actions", "AWS (EC2, S3, Lambda)"] },
     { key: "security",      items: ["OWASP", "OAuth2", "JWT", "Secure API Development"] },
-    { key: "testing",       items: ["JUnit", "Unit Testing"] },
+    { key: "testing",       items: ["JUnit", "JUnit 5", "Unit Testing", "Integration Testing"] },
     { key: "tools",         items: ["Git", "Linux", "IntelliJ IDEA", "VS Code"] },
     { key: "methodologies", items: ["Agile", "Scrum", "CI/CD", "Code Review"] }
   ];
@@ -113,6 +113,8 @@
     renderExperience(data);
     renderEducation(data);
     renderProjects(data);
+    initMetricCounters();
+    initSpotlightCards();
   }
 
   /* ------------------------------------------------------------------ *
@@ -175,6 +177,15 @@
         card.appendChild(el("h3", null, edu.degree));
         card.appendChild(el("div", "school", edu.school + " — " + edu.location));
         if (edu.extra) card.appendChild(el("div", "extra", edu.extra));
+        if (edu.website) {
+          var website = document.createElement("a");
+          website.className = "edu-website";
+          website.href = edu.website;
+          website.target = "_blank";
+          website.rel = "noopener noreferrer";
+          website.textContent = edu.website.replace(/^https?:\/\//, "");
+          card.appendChild(website);
+        }
         grid.appendChild(card);
       });
     }
@@ -191,6 +202,9 @@
         var ul = el("ul", "bullets");
         (intern.bullets || []).forEach(function (b) { ul.appendChild(el("li", null, b)); });
         item.appendChild(ul);
+        var tags = el("div", "tag-row");
+        (intern.tech || []).forEach(function (t) { tags.appendChild(el("span", "tag", t)); });
+        if (intern.tech && intern.tech.length) item.appendChild(tags);
         internWrap.appendChild(item);
       }
     }
@@ -209,12 +223,21 @@
       var card = el("div", "project-card reveal");
 
       var thumb = el("div", "project-thumb");
+      if (proj.image) {
+        var projectImage = document.createElement("img");
+        projectImage.src = proj.image;
+        projectImage.alt = proj.imageAlt || proj.title;
+        projectImage.loading = "lazy";
+        projectImage.decoding = "async";
+        thumb.appendChild(projectImage);
+      }
       thumb.appendChild(el("span", null, proj.title));
       card.appendChild(thumb);
 
       var body = el("div", "project-body");
       body.appendChild(el("div", "subtitle", proj.subtitle || ""));
       body.appendChild(el("h3", null, proj.title));
+      if (proj.dates) body.appendChild(el("div", "project-dates", proj.dates));
       body.appendChild(el("p", null, proj.description));
 
       var tags = el("div", "tag-row");
@@ -425,7 +448,102 @@
   }
 
   /* ------------------------------------------------------------------ *
-   * 11. FOOTER YEAR
+   * 11. PAGE FEEDBACK
+   * Keep navigation and reading position connected to the content currently
+   * on screen. These small signals make a long portfolio easier to explore.
+   * ------------------------------------------------------------------ */
+  function initScrollProgress() {
+    var bar = document.getElementById("scroll-progress-bar");
+    if (!bar) return;
+    function update() {
+      var available = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.width = (available > 0 ? (window.scrollY / available) * 100 : 0) + "%";
+    }
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+  }
+
+  function initActiveNavigation() {
+    if (!("IntersectionObserver" in window)) return;
+    var links = Array.prototype.slice.call(document.querySelectorAll(".nav-links a[href^='#']"));
+    var sections = links.map(function (link) { return document.querySelector(link.getAttribute("href")); }).filter(Boolean);
+    if (!sections.length) return;
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        links.forEach(function (link) {
+          link.classList.toggle("active", link.getAttribute("href") === "#" + entry.target.id);
+        });
+      });
+    }, { rootMargin: "-35% 0px -55% 0px", threshold: 0 });
+    sections.forEach(function (section) { observer.observe(section); });
+  }
+
+  function initMetricCounters() {
+    var metrics = document.querySelectorAll(".count-up:not([data-count-ready])");
+    if (!metrics.length) return;
+    var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    function animate(metric) {
+      var original = metric.textContent.trim();
+      var numberMatch = original.match(/(\d+(?:\.\d+)?)/);
+      if (!numberMatch || reduceMotion) { metric.dataset.countReady = "true"; return; }
+      var target = Number(numberMatch[1]);
+      var decimals = (numberMatch[1].split(".")[1] || "").length;
+      var prefix = original.slice(0, numberMatch.index);
+      var suffix = original.slice(numberMatch.index + numberMatch[1].length);
+      var start = performance.now();
+      var duration = 900;
+      metric.dataset.countReady = "true";
+      function frame(now) {
+        var progress = Math.min((now - start) / duration, 1);
+        var eased = 1 - Math.pow(1 - progress, 3);
+        metric.textContent = prefix + (target * eased).toFixed(decimals) + suffix;
+        if (progress < 1) requestAnimationFrame(frame);
+      }
+      requestAnimationFrame(frame);
+    }
+
+    if (!("IntersectionObserver" in window)) {
+      metrics.forEach(animate);
+      return;
+    }
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) { animate(entry.target); observer.unobserve(entry.target); }
+      });
+    }, { threshold: 0.7 });
+    metrics.forEach(function (metric) { observer.observe(metric); });
+  }
+
+  function initSpotlightCards() {
+    document.querySelectorAll(".facts-card, .skill-card, .edu-card, .project-card").forEach(function (card) {
+      if (card.dataset.spotlightReady) return;
+      card.dataset.spotlightReady = "true";
+      card.addEventListener("pointermove", function (event) {
+        var rect = card.getBoundingClientRect();
+        card.style.setProperty("--spotlight-x", (event.clientX - rect.left) + "px");
+        card.style.setProperty("--spotlight-y", (event.clientY - rect.top) + "px");
+      });
+    });
+  }
+
+  function initHeroPointer() {
+    var portrait = document.querySelector(".hero-portrait");
+    var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (!portrait || reduceMotion || !window.matchMedia("(pointer: fine)").matches) return;
+    portrait.addEventListener("pointermove", function (event) {
+      var rect = portrait.getBoundingClientRect();
+      var x = (event.clientX - rect.left) / rect.width - 0.5;
+      var y = (event.clientY - rect.top) / rect.height - 0.5;
+      portrait.style.transform = "perspective(700px) rotateX(" + (-y * 5) + "deg) rotateY(" + (x * 5) + "deg)";
+    });
+    portrait.addEventListener("pointerleave", function () { portrait.style.transform = ""; });
+  }
+
+  /* ------------------------------------------------------------------ *
+   * 12. FOOTER YEAR
    * ------------------------------------------------------------------ */
   function initFooterYear() {
     var yearEl = document.getElementById("footer-year");
@@ -494,6 +612,9 @@
     initNav();
     initHeroMesh();
     initHeaderScrollState();
+    initScrollProgress();
+    initActiveNavigation();
+    initHeroPointer();
     initFooterYear();
     initContactForm();
     initLanguage();

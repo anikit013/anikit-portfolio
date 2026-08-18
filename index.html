@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title data-i18n="meta.title">Anikit Kumar Chaudhary — Backend Software Engineer</title>
+<title data-i18n="meta.title">Anikit Kumar Chaudhary — Software Engineer | Java &amp; Spring Boot</title>
 <meta name="description" content="" data-i18n-attr="content:meta.description">
 <meta name="color-scheme" content="dark light">
 
@@ -12,7 +12,7 @@
 <meta property="og:title" content="" data-i18n-attr="content:meta.ogTitle">
 <meta property="og:description" content="" data-i18n-attr="content:meta.ogDescription">
 <meta property="og:image" content="assets/img/og-cover.jpg">
-<meta property="og:url" content="https://anikit013.github.io/">
+<meta property="og:url" content="https://anikit013.github.io/anikit-portfolio/">
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%230A0F1C%22/><text x=%2250%22 y=%2262%22 font-size=%2244%22 font-family=%22monospace%22 fill=%22%23F2A93B%22 text-anchor=%22middle%22>A</text></svg>">
@@ -21,6 +21,7 @@
 <body data-theme="dark">
 
 <div id="page-transition" aria-hidden="true"></div>
+<div class="scroll-progress" aria-hidden="true"><span id="scroll-progress-bar"></span></div>
 
 <!-- ============ HEADER ============ -->
 <header class="site-header">
@@ -81,16 +82,14 @@
           <a class="btn btn-ghost" href="#contact" data-i18n="hero.ctaContact">Contact Me</a>
         </div>
 
-        <div class="hero-stats">
-          <div class="stat"><div class="stat-value" data-i18n="hero.stat1Value">3.5+</div><div class="stat-label" data-i18n="hero.stat1Label">Years of experience</div></div>
-          <div class="stat"><div class="stat-value" data-i18n="hero.stat2Value">5M+</div><div class="stat-label" data-i18n="hero.stat2Label">Subscribers served</div></div>
-          <div class="stat"><div class="stat-value" data-i18n="hero.stat3Value">~150ms</div><div class="stat-label" data-i18n="hero.stat3Label">API response time achieved</div></div>
+      <div class="hero-stats">
+          <div class="stat"><div class="stat-value count-up" data-i18n="hero.stat1Value">3.5+</div><div class="stat-label" data-i18n="hero.stat1Label">Years of experience</div></div>
+          <div class="stat"><div class="stat-value count-up" data-i18n="hero.stat2Value">5M+</div><div class="stat-label" data-i18n="hero.stat2Label">Subscribers served</div></div>
+          <div class="stat"><div class="stat-value count-up" data-i18n="hero.stat3Value">~150ms</div><div class="stat-label" data-i18n="hero.stat3Label">API response time achieved</div></div>
         </div>
       </div>
 
-      <!-- Image/media slot: hero portrait.
-           Replace assets/img/profile.jpg with your own square photo (min 500x500px).
-           If the file is missing, initials are shown automatically as a fallback. -->
+      <!-- Hero portrait with initials fallback if the image cannot be loaded. -->
       <div class="hero-portrait">
         <div class="ring" aria-hidden="true"></div>
         <div class="ring ring-2" aria-hidden="true"></div>
@@ -99,7 +98,7 @@
         <span class="node" aria-hidden="true"></span>
         <span class="node" aria-hidden="true"></span>
         <div class="frame">
-          <img src="assets/img/profile.jpg" alt="" data-i18n-attr="alt:hero.photoAlt" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <img src="assets/img/hero-portrait.png" alt="" data-i18n-attr="alt:hero.photoAlt" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
           <div class="initials-fallback" style="display:none;">AC</div>
         </div>
       </div>
@@ -124,6 +123,10 @@
           <p data-i18n="about.summary">Summary goes here.</p>
         </div>
 
+        <figure class="about-portrait reveal">
+          <img src="assets/img/about-portrait.png" alt="" data-i18n-attr="alt:about.photoAlt">
+        </figure>
+
         <div class="facts-card reveal">
           <h3 data-i18n="about.factsHeading">Quick facts</h3>
           <dl>
@@ -131,6 +134,7 @@
             <div><dt data-i18n="about.factStudyLabel">Currently studying</dt><dd data-i18n="about.factStudyValue">M.Sc. Applied Computer Science</dd></div>
             <div><dt data-i18n="about.factAvailabilityLabel">Availability</dt><dd data-i18n="about.factAvailabilityValue">Open to Werkstudent roles</dd></div>
             <div><dt data-i18n="about.factLanguagesLabel">Languages spoken</dt><dd data-i18n="about.factLanguagesValue">Nepali, English, Hindi, German</dd></div>
+            <div><dt data-i18n="about.factCertificationsLabel">Certifications</dt><dd data-i18n="about.factCertificationsValue">CNSS Certified Network Security Specialist · Introduction to Cybersecurity · Cyber@ANZ</dd></div>
           </dl>
         </div>
       </div>
@@ -185,7 +189,9 @@
         <p data-i18n="projects.subheading">A mix of professional and personal projects.</p>
       </div>
 
-      
+      <div class="projects-grid" id="projects-grid"><!-- populated by JS --></div>
+      <p class="projects-note reveal" data-i18n="projects.addMoreNote">Add more project cards by copying an item in the projects.items array of each language file.</p>
+    </div>
   </section>
 
   <section id="contact">
@@ -196,6 +202,10 @@
         <p data-i18n="contact.subheading">Open to Werkstudent opportunities.</p>
 
         <div class="contact-links">
+          <!-- <a class="contact-link" href="tel:+4915565762881">
+            <span class="icon-btn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.08 4.18 2 2 0 014.07 2h3a2 2 0 012 1.72c.12.9.33 1.78.62 2.64a2 2 0 01-.45 2.11L7.97 9.74a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.86.29 1.74.5 2.64.62A2 2 0 0122 16.92z"/></svg></span>
+            <span data-i18n="contact.phoneLabel">Call Me</span>
+          </a> -->
           <a class="contact-link" href="mailto:anikit781@gmail.com">
             <span class="icon-btn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M4 6l8 7 8-7"/></svg></span>
             <span data-i18n="contact.emailLabel">Email Me</span>
