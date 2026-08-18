@@ -193,7 +193,7 @@
         "liveUrl": ""
       }
     ],
-    "addMoreNote": "Add more project cards by copying an item in the projects.items array of each language file."
+    "addMoreNote": ""
   },
   "contact": {
     "eyebrow": "Contact",
