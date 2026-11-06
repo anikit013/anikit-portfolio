@@ -1,7 +1,8 @@
 /* ==========================================================================
    Anikit Kumar Chaudhary — Portfolio
    Vanilla JS: i18n loader, theme + nav controls, hero "service mesh" canvas,
-   content rendering from language files, scroll reveal, contact form.
+   content rendering from language files, interactive terminal CLI,
+   project filtering, copy email toast, scroll reveal, contact form.
    No build step — designed to run as-is on GitHub Pages.
    ========================================================================== */
 
@@ -15,29 +16,30 @@
   var DEFAULT_LANG = "en";
   var STORAGE_KEY = "akc-portfolio-lang";
   var THEME_KEY = "akc-portfolio-theme";
+  var EMAIL_ADDRESS = "anikit781@gmail.com";
 
   // Skills data shared across languages — only the category *labels* are
-  // translated (via skills.categories.* in each lang file). Add / remove
-  // items here; they appear identically in every language.
+  // translated (via skills.categories.* in each lang file).
   var SKILLS_DATA = [
     { key: "languages",     items: ["Java", "TypeScript", "JavaScript", "Python", "SQL"] },
     { key: "backend",       items: ["Spring Boot", "Node.js", "REST APIs", "Microservices", "OAuth2", "JWT"] },
-    { key: "frontend",      items: ["React", "Angular", "TypeScript", "Tailwind CSS", "HTML5", "CSS3"] },
+    { key: "frontend",      items: ["React", "Angular", "Tailwind CSS", "HTML5", "CSS3"] },
     { key: "databases",     items: ["PostgreSQL", "Oracle", "Redis"] },
-    { key: "cloud",         items: ["Docker", "Jenkins", "GitHub Actions", "AWS (EC2, S3, Lambda)"] },
-    { key: "security",      items: ["OWASP", "OAuth2", "JWT", "Secure API Development"] },
-    { key: "testing",       items: ["JUnit", "JUnit 5", "Unit Testing", "Integration Testing"] },
-    { key: "tools",         items: ["Git", "Linux", "IntelliJ IDEA", "VS Code"] },
-    { key: "methodologies", items: ["Agile", "Scrum", "CI/CD", "Code Review"] }
+    { key: "cloud",         items: ["Docker", "Jenkins", "GitHub Actions", "AWS", "CI/CD"] },
+    { key: "security",      items: ["OWASP", "OAuth2", "JWT", "Secure API Development", "JUnit", "Unit Testing"] },
+    { key: "tools",         items: ["Git", "Linux", "IntelliJ IDEA", "VS Code", "Agile", "Scrum", "Code Review"] },
+    { key: "ai",            items: ["Cursor", "ChatGPT", "Claude", "Gemini", "Prompt Engineering", "AI Agents", "MCP", "AI-Assisted Development"] }
   ];
 
   var cache = {};      // lang -> parsed JSON
   var currentLang = DEFAULT_LANG;
+  var currentFilter = "all";
 
   /* ------------------------------------------------------------------ *
    * 2. HELPERS
    * ------------------------------------------------------------------ */
   function byPath(obj, path) {
+    if (!obj || !path) return undefined;
     return path.split(".").reduce(function (acc, key) {
       return acc && typeof acc === "object" ? acc[key] : undefined;
     }, obj);
@@ -81,44 +83,63 @@
   }
 
   /* ------------------------------------------------------------------ *
-   * 3. APPLY TRANSLATIONS
+   * 3. TOAST NOTIFICATIONS
+   * ------------------------------------------------------------------ */
+  var toastTimer = null;
+  function showToast(message, duration) {
+    var toast = document.getElementById("toast");
+    if (!toast) return;
+    duration = duration || 3000;
+    toast.textContent = message;
+    toast.classList.add("visible");
+
+    if (toastTimer) clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () {
+      toast.classList.remove("visible");
+    }, duration);
+  }
+
+  /* ------------------------------------------------------------------ *
+   * 4. APPLY TRANSLATIONS
    * ------------------------------------------------------------------ */
   function applyTranslations(data, lang) {
     document.documentElement.lang = lang;
-    document.documentElement.dir = "ltr"; // none of the three languages are RTL
+    document.documentElement.dir = "ltr";
 
     // Plain text content: [data-i18n="a.b.c"]
-    document.querySelectorAll("[data-i18n]").forEach(function (el) {
-      var val = byPath(data, el.getAttribute("data-i18n"));
-      if (typeof val === "string") el.textContent = val;
+    document.querySelectorAll("[data-i18n]").forEach(function (elm) {
+      var val = byPath(data, elm.getAttribute("data-i18n"));
+      if (typeof val === "string") elm.textContent = val;
     });
 
     // Attributes: [data-i18n-attr="attr1:path1|attr2:path2"]
-    document.querySelectorAll("[data-i18n-attr]").forEach(function (el) {
-      el.getAttribute("data-i18n-attr").split("|").forEach(function (pair) {
+    document.querySelectorAll("[data-i18n-attr]").forEach(function (elm) {
+      elm.getAttribute("data-i18n-attr").split("|").forEach(function (pair) {
         var parts = pair.split(":");
         var attr = parts[0], path = parts[1];
         var val = byPath(data, path);
-        if (typeof val === "string") el.setAttribute(attr, val);
+        if (typeof val === "string") elm.setAttribute(attr, val);
       });
     });
 
     // Active state on language switcher
     document.querySelectorAll(".lang-switch button").forEach(function (btn) {
-      btn.classList.toggle("active", btn.getAttribute("data-lang") === lang);
-      btn.setAttribute("aria-pressed", btn.getAttribute("data-lang") === lang ? "true" : "false");
+      var isActive = btn.getAttribute("data-lang") === lang;
+      btn.classList.toggle("active", isActive);
+      btn.setAttribute("aria-pressed", isActive ? "true" : "false");
     });
 
     renderSkills(data);
     renderExperience(data);
     renderEducation(data);
     renderProjects(data);
+    updateFilterLabels(data);
     initMetricCounters();
     initSpotlightCards();
   }
 
   /* ------------------------------------------------------------------ *
-   * 4. DYNAMIC SECTIONS
+   * 5. DYNAMIC SECTIONS
    * ------------------------------------------------------------------ */
   function el(tag, className, html) {
     var node = document.createElement(tag);
@@ -193,12 +214,13 @@
     var internWrap = document.getElementById("internship-timeline");
     if (internWrap) {
       internWrap.innerHTML = "";
-      var intern = byPath(data, "education.internshipItem");
-      if (intern) {
+      var trainingList = byPath(data, "education.trainingItems") || (byPath(data, "education.internshipItem") ? [byPath(data, "education.internshipItem")] : []);
+      trainingList.forEach(function (intern) {
         var item = el("div", "timeline-item reveal");
         item.appendChild(el("div", "dates", intern.dates));
         item.appendChild(el("h3", null, intern.role));
-        item.appendChild(el("div", "role-company", "<strong>" + intern.company + "</strong>"));
+        var compHtml = "<strong>" + intern.company + "</strong>" + (intern.location ? " — " + intern.location : "");
+        item.appendChild(el("div", "role-company", compHtml));
         var ul = el("ul", "bullets");
         (intern.bullets || []).forEach(function (b) { ul.appendChild(el("li", null, b)); });
         item.appendChild(ul);
@@ -206,7 +228,7 @@
         (intern.tech || []).forEach(function (t) { tags.appendChild(el("span", "tag", t)); });
         if (intern.tech && intern.tech.length) item.appendChild(tags);
         internWrap.appendChild(item);
-      }
+      });
     }
     observeReveals();
   }
@@ -218,20 +240,50 @@
     var items = byPath(data, "projects.items") || [];
     var liveLabel = byPath(data, "projects.liveLabel") || "Live";
     var codeLabel = byPath(data, "projects.codeLabel") || "Code";
+    var enterpriseDefault = byPath(data, "projects.enterpriseLabel") || "Enterprise System";
 
-    items.forEach(function (proj) {
+    var filteredItems = items.filter(function (proj) {
+      if (currentFilter === "all") return true;
+      return proj.category === currentFilter;
+    });
+
+    if (filteredItems.length === 0) {
+      var emptyMsg = el("p", "projects-empty", "No projects found in this category.");
+      grid.appendChild(emptyMsg);
+      return;
+    }
+
+    filteredItems.forEach(function (proj) {
       var card = el("div", "project-card reveal");
+      card.setAttribute("data-category", proj.category || "backend");
 
       var thumb = el("div", "project-thumb");
+
+      // Picture with WebP and PNG fallback
       if (proj.image) {
+        var picture = document.createElement("picture");
+        var webpSrc = proj.image.replace(/\.png$/, ".webp");
+        var sourceWebp = document.createElement("source");
+        sourceWebp.srcset = webpSrc;
+        sourceWebp.type = "image/webp";
+        picture.appendChild(sourceWebp);
+
         var projectImage = document.createElement("img");
         projectImage.src = proj.image;
         projectImage.alt = proj.imageAlt || proj.title;
         projectImage.loading = "lazy";
         projectImage.decoding = "async";
-        thumb.appendChild(projectImage);
+        picture.appendChild(projectImage);
+        thumb.appendChild(picture);
       }
-      thumb.appendChild(el("span", null, proj.title));
+
+      // Project Badge
+      if (proj.badge) {
+        var badge = el("span", "project-badge", proj.badge);
+        thumb.appendChild(badge);
+      }
+
+      thumb.appendChild(el("span", "project-title-overlay", proj.title));
       card.appendChild(thumb);
 
       var body = el("div", "project-body");
@@ -248,14 +300,20 @@
       if (proj.liveUrl) {
         var liveA = document.createElement("a");
         liveA.href = proj.liveUrl; liveA.target = "_blank"; liveA.rel = "noopener noreferrer";
-        liveA.textContent = "↗ " + liveLabel;
+        liveA.className = "project-link-btn live";
+        liveA.innerHTML = "<span>↗</span> " + liveLabel;
         links.appendChild(liveA);
       }
       if (proj.codeUrl) {
         var codeA = document.createElement("a");
         codeA.href = proj.codeUrl; codeA.target = "_blank"; codeA.rel = "noopener noreferrer";
-        codeA.textContent = "</> " + codeLabel;
+        codeA.className = "project-link-btn code";
+        codeA.innerHTML = "<span>&lt;/&gt;</span> " + codeLabel;
         links.appendChild(codeA);
+      }
+      if (!proj.liveUrl && !proj.codeUrl) {
+        var entSpan = el("span", "project-link-badge", "🔒 " + (proj.statusLabel || enterpriseDefault));
+        links.appendChild(entSpan);
       }
       body.appendChild(links);
 
@@ -265,8 +323,43 @@
     observeReveals();
   }
 
+  function updateFilterLabels(data) {
+    var filtersObj = byPath(data, "projects.filters");
+    if (!filtersObj) return;
+    document.querySelectorAll(".project-filters button").forEach(function (btn) {
+      var cat = btn.getAttribute("data-filter");
+      if (filtersObj[cat]) {
+        btn.textContent = filtersObj[cat];
+      }
+    });
+  }
+
   /* ------------------------------------------------------------------ *
-   * 5. LANGUAGE SWITCHING
+   * 6. PROJECT FILTERS
+   * ------------------------------------------------------------------ */
+  function initProjectFilters() {
+    var container = document.getElementById("project-filters");
+    if (!container) return;
+
+    container.addEventListener("click", function (e) {
+      var btn = e.target.closest("button[data-filter]");
+      if (!btn) return;
+      var filter = btn.getAttribute("data-filter");
+      if (filter === currentFilter) return;
+
+      currentFilter = filter;
+      container.querySelectorAll("button").forEach(function (b) {
+        b.classList.toggle("active", b === btn);
+        b.setAttribute("aria-selected", b === btn ? "true" : "false");
+      });
+
+      var activeData = cache[currentLang] || {};
+      renderProjects(activeData);
+    });
+  }
+
+  /* ------------------------------------------------------------------ *
+   * 7. LANGUAGE SWITCHING
    * ------------------------------------------------------------------ */
   function setLanguage(lang, persist) {
     if (SUPPORTED_LANGS.indexOf(lang) === -1) lang = DEFAULT_LANG;
@@ -277,10 +370,12 @@
       .then(function (data) {
         currentLang = lang;
         applyTranslations(data, lang);
-        if (persist) storeLang(lang);
+        if (persist) {
+          storeLang(lang);
+          showToast("Language changed to " + lang.toUpperCase(), 2000);
+        }
       })
       .catch(function () {
-        // Fall back to English if a language file fails to load
         if (lang !== DEFAULT_LANG) return setLanguage(DEFAULT_LANG, false);
       })
       .then(function () {
@@ -301,7 +396,7 @@
   }
 
   /* ------------------------------------------------------------------ *
-   * 6. THEME TOGGLE
+   * 8. THEME TOGGLE
    * ------------------------------------------------------------------ */
   function initTheme() {
     var stored = getStoredTheme();
@@ -312,15 +407,271 @@
     var toggle = document.getElementById("theme-toggle");
     if (toggle) {
       toggle.addEventListener("click", function () {
-        var next = document.body.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        var current = document.body.getAttribute("data-theme");
+        var next = current === "dark" ? "light" : "dark";
         document.body.setAttribute("data-theme", next);
         storeTheme(next);
+        showToast("Switched to " + next + " theme", 2000);
       });
     }
   }
 
   /* ------------------------------------------------------------------ *
-   * 7. MOBILE NAV
+   * 9. COPY EMAIL FUNCTIONALITY
+   * ------------------------------------------------------------------ */
+  function initEmailCopy() {
+    document.querySelectorAll(".copy-email-btn").forEach(function (btn) {
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(EMAIL_ADDRESS).then(function () {
+            var data = cache[currentLang] || {};
+            var msg = byPath(data, "contact.copiedToast") || "Email copied to clipboard!";
+            showToast(msg);
+          }).catch(function () {
+            showToast("Email: " + EMAIL_ADDRESS);
+          });
+        } else {
+          // Fallback
+          var ta = document.createElement("textarea");
+          ta.value = EMAIL_ADDRESS;
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand("copy");
+          document.body.removeChild(ta);
+          showToast("Email copied to clipboard!");
+        }
+      });
+    });
+  }
+
+  /* ------------------------------------------------------------------ *
+   * 10. INTERACTIVE TERMINAL CLI
+   * ------------------------------------------------------------------ */
+  function initTerminalCLI() {
+    var overlay = document.getElementById("cli-overlay");
+    var form = document.getElementById("cli-form");
+    var input = document.getElementById("cli-input");
+    var output = document.getElementById("cli-output");
+    var trigger = document.getElementById("hero-terminal-trigger");
+    var closeBtn = document.getElementById("cli-close-btn");
+    var closeX = document.getElementById("cli-close-x");
+
+    if (!overlay || !form || !input || !output) return;
+
+    var history = [];
+    var historyIndex = -1;
+
+    function openCLI() {
+      overlay.classList.add("open");
+      overlay.setAttribute("aria-hidden", "false");
+      setTimeout(function () { input.focus(); }, 100);
+    }
+
+    function closeCLI() {
+      overlay.classList.remove("open");
+      overlay.setAttribute("aria-hidden", "true");
+    }
+
+    if (trigger) {
+      trigger.addEventListener("click", openCLI);
+      trigger.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openCLI(); }
+      });
+    }
+
+    if (closeBtn) closeBtn.addEventListener("click", closeCLI);
+    if (closeX) closeX.addEventListener("click", closeCLI);
+
+    overlay.addEventListener("click", function (e) {
+      if (e.target === overlay) closeCLI();
+    });
+
+    function printLine(text, className) {
+      var p = document.createElement("p");
+      p.className = "cli-line " + (className || "");
+      p.innerHTML = text;
+      output.appendChild(p);
+      output.scrollTop = output.scrollHeight;
+    }
+
+    var commands = {
+      help: function () {
+        printLine("<span class='cli-hl'>Available commands:</span>");
+        printLine("  <span class='cli-cmd'>whoami</span>      - About Anikit Kumar Chaudhary");
+        printLine("  <span class='cli-cmd'>skills</span>      - Technical stack &amp; capabilities");
+        printLine("  <span class='cli-cmd'>projects</span>    - Featured engineering projects");
+        printLine("  <span class='cli-cmd'>contact</span>     - How to reach out");
+        printLine("  <span class='cli-cmd'>email</span>       - Copy email address to clipboard");
+        printLine("  <span class='cli-cmd'>cv</span>          - Download CV / Resume");
+        printLine("  <span class='cli-cmd'>theme</span>       - Toggle Dark / Light theme");
+        printLine("  <span class='cli-cmd'>clear</span>       - Clear terminal screen");
+        printLine("  <span class='cli-cmd'>exit</span>        - Close terminal");
+      },
+      whoami: function () {
+        printLine("<span class='cli-hl'>Anikit Kumar Chaudhary</span> — Software Engineer");
+        printLine("3+ years building Java/Spring Boot applications, microservices and REST APIs");
+        printLine("for telecom and enterprise systems.");
+        printLine("Education: M.Sc. Applied Computer Science @ Hochschule Schmalkalden, Germany.");
+        printLine("Status: <span class='cli-success'>Available for 20 hours per week — Werkstudent &amp; part-time roles in Germany.</span>");
+      },
+      skills: function () {
+        printLine("<span class='cli-hl'>Technical Skills:</span>");
+        printLine("  Languages : Java, TypeScript, JavaScript, Python, SQL");
+        printLine("  Backend   : Spring Boot, Node.js, REST APIs, Microservices, OAuth2, JWT");
+        printLine("  Frontend  : React, Angular, Tailwind CSS, HTML5, CSS3");
+        printLine("  Databases : PostgreSQL, Oracle, Redis");
+        printLine("  Cloud/Ops : Docker, Jenkins, GitHub Actions, AWS, CI/CD");
+        printLine("  Security  : OWASP, Secure API Dev, JUnit, Unit Testing");
+        printLine("  AI Tools  : Cursor, ChatGPT, Claude, Gemini, Prompt Engineering, AI Agents, MCP");
+      },
+      projects: function () {
+        printLine("<span class='cli-hl'>Featured Projects:</span>");
+        printLine("  1. <strong>HSM Developer Hub</strong> [Open Source] - React, Vite, Supabase, Prisma");
+        printLine("     <a href='https://github.com/anikit013/hsm-developer-hub' target='_blank' class='cli-link'>github.com/anikit013/hsm-developer-hub</a>");
+        printLine("  2. <strong>Telecom Analytics Platform</strong> [Enterprise] - Spring Boot, Redis, Angular (5M+ users)");
+        printLine("  3. <strong>Microservices Migration</strong> [Enterprise] - Docker, Jenkins, AWS");
+        printLine("  4. <strong>Air Quality ML Prediction</strong> [AI] - Python, XGBoost, Scikit-learn");
+        printLine("     <a href='https://github.com/anikit013/Air-Quality-Index-Machine-Learning' target='_blank' class='cli-link'>github.com/anikit013/Air-Quality-Index-Machine-Learning</a>");
+      },
+      contact: function () {
+        printLine("<span class='cli-hl'>Contact Channels:</span>");
+        printLine("  Phone    : <a href='tel:+4915565762881' class='cli-link'>+49 155 6576 2881</a>");
+        printLine("  Email    : <a href='mailto:anikit781@gmail.com' class='cli-link'>anikit781@gmail.com</a>");
+        printLine("  LinkedIn : <a href='https://linkedin.com/in/anikit013' target='_blank' class='cli-link'>linkedin.com/in/anikit013</a>");
+        printLine("  GitHub   : <a href='https://github.com/anikit013' target='_blank' class='cli-link'>github.com/anikit013</a>");
+        printLine("  Location : Schmalkalden, Germany");
+      },
+      email: function () {
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(EMAIL_ADDRESS);
+          printLine("<span class='cli-success'>Copied '" + EMAIL_ADDRESS + "' to clipboard!</span>");
+        } else {
+          printLine("Email: " + EMAIL_ADDRESS);
+        }
+        showToast("Email copied to clipboard!");
+      },
+      cv: function () {
+        printLine("Initiating CV download...");
+        var a = document.createElement("a");
+        a.href = "assets/Anikit_CV.pdf";
+        a.download = "Anikit_Kumar_Chaudhary_CV.pdf";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+      },
+      theme: function () {
+        var current = document.body.getAttribute("data-theme");
+        var next = current === "dark" ? "light" : "dark";
+        document.body.setAttribute("data-theme", next);
+        storeTheme(next);
+        printLine("Theme set to <span class='cli-hl'>" + next + "</span>.");
+        showToast("Theme: " + next);
+      },
+      clear: function () {
+        output.innerHTML = "";
+      },
+      exit: function () {
+        closeCLI();
+      },
+      quit: function () {
+        closeCLI();
+      }
+    };
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var raw = input.value.trim();
+      input.value = "";
+      if (!raw) return;
+
+      history.push(raw);
+      historyIndex = history.length;
+
+      printLine("<span class='cli-prompt'>visitor@akc:~$</span> " + raw);
+
+      var cmd = raw.toLowerCase().split(" ")[0];
+      if (commands[cmd]) {
+        commands[cmd]();
+      } else {
+        printLine("Command not recognized: '<span class='cli-danger'>" + cmd + "</span>'. Type <span class='cli-hl'>help</span> for valid commands.", "cli-error");
+      }
+    });
+
+    input.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowUp") {
+        e.preventDefault();
+        if (historyIndex > 0) {
+          historyIndex--;
+          input.value = history[historyIndex] || "";
+        }
+      } else if (e.key === "ArrowDown") {
+        e.preventDefault();
+        if (historyIndex < history.length - 1) {
+          historyIndex++;
+          input.value = history[historyIndex] || "";
+        } else {
+          historyIndex = history.length;
+          input.value = "";
+        }
+      } else if (e.key === "Escape") {
+        closeCLI();
+      }
+    });
+
+    // Make trigger globally accessible for shortcuts
+    window._akcOpenCLI = openCLI;
+    window._akcCloseCLI = closeCLI;
+  }
+
+  /* ------------------------------------------------------------------ *
+   * 11. KEYBOARD SHORTCUTS
+   * ------------------------------------------------------------------ */
+  function initKeyboardShortcuts() {
+    window.addEventListener("keydown", function (e) {
+      var activeEl = document.activeElement;
+      var isInput = activeEl && (activeEl.tagName === "INPUT" || activeEl.tagName === "TEXTAREA" || activeEl.isContentEditable);
+
+      // Backtick toggles CLI
+      if (e.key === "`") {
+        if (!isInput) {
+          e.preventDefault();
+          var overlay = document.getElementById("cli-overlay");
+          if (overlay && overlay.classList.contains("open")) {
+            if (window._akcCloseCLI) window._akcCloseCLI();
+          } else {
+            if (window._akcOpenCLI) window._akcOpenCLI();
+          }
+        }
+      }
+
+      // Escape closes CLI or mobile nav
+      if (e.key === "Escape") {
+        if (window._akcCloseCLI) window._akcCloseCLI();
+        var navLinks = document.getElementById("nav-links");
+        if (navLinks && navLinks.classList.contains("open")) {
+          navLinks.classList.remove("open");
+          var menuToggle = document.getElementById("menu-toggle");
+          if (menuToggle) menuToggle.setAttribute("aria-expanded", "false");
+        }
+      }
+
+      // 't' toggles theme if not typing
+      if ((e.key === "t" || e.key === "T") && !isInput && !e.ctrlKey && !e.metaKey && !e.altKey) {
+        var toggle = document.getElementById("theme-toggle");
+        if (toggle) toggle.click();
+      }
+
+      // 'c' copies email if not typing
+      if ((e.key === "c" || e.key === "C") && !isInput && !e.ctrlKey && !e.metaKey && !e.altKey) {
+        var copyBtn = document.querySelector(".copy-email-btn");
+        if (copyBtn) copyBtn.click();
+      }
+    });
+  }
+
+  /* ------------------------------------------------------------------ *
+   * 12. MOBILE NAV
    * ------------------------------------------------------------------ */
   function initNav() {
     var menuToggle = document.getElementById("menu-toggle");
@@ -341,7 +692,7 @@
   }
 
   /* ------------------------------------------------------------------ *
-   * 8. SCROLL REVEAL
+   * 13. SCROLL REVEAL
    * ------------------------------------------------------------------ */
   var revealObserver;
   function observeReveals() {
@@ -357,7 +708,7 @@
             revealObserver.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+      }, { threshold: 0.1, rootMargin: "0px 0px -40px 0px" });
     }
     document.querySelectorAll(".reveal:not(.is-visible)").forEach(function (elm) {
       revealObserver.observe(elm);
@@ -365,10 +716,7 @@
   }
 
   /* ------------------------------------------------------------------ *
-   * 9. HERO "SERVICE MESH" BACKGROUND
-   * A lightweight animated node-and-link graph, echoing the microservice
-   * topologies the CV describes. Pure SVG, no canvas, respects
-   * prefers-reduced-motion.
+   * 14. HERO "SERVICE MESH" BACKGROUND
    * ------------------------------------------------------------------ */
   function initHeroMesh() {
     var svg = document.getElementById("hero-mesh");
@@ -386,7 +734,6 @@
       });
     }
 
-    // Connect each node to its 2 nearest neighbours for a mesh feel
     var links = [];
     nodes.forEach(function (n, i) {
       var dists = nodes.map(function (m, j) { return { j: j, d: Math.hypot(n.x - m.x, n.y - m.y) }; })
@@ -411,7 +758,6 @@
       line.setAttribute("stroke-width", "1");
       svg.appendChild(line);
 
-      // Animated "packet" traveling along the link
       if (!reduceMotion) {
         var packet = document.createElementNS(ns, "circle");
         packet.setAttribute("r", "2.4");
@@ -435,22 +781,20 @@
   }
 
   /* ------------------------------------------------------------------ *
-   * 10. STICKY NAV BACKGROUND ON SCROLL
+   * 15. STICKY NAV BACKGROUND ON SCROLL
    * ------------------------------------------------------------------ */
   function initHeaderScrollState() {
     var header = document.querySelector(".site-header");
     if (!header) return;
     function update() {
-      header.style.borderBottomColor = window.scrollY > 8 ? "var(--border)" : "transparent";
+      header.classList.toggle("scrolled", window.scrollY > 12);
     }
     update();
     window.addEventListener("scroll", update, { passive: true });
   }
 
   /* ------------------------------------------------------------------ *
-   * 11. PAGE FEEDBACK
-   * Keep navigation and reading position connected to the content currently
-   * on screen. These small signals make a long portfolio easier to explore.
+   * 16. PAGE FEEDBACK & INTERACTIONS
    * ------------------------------------------------------------------ */
   function initScrollProgress() {
     var bar = document.getElementById("scroll-progress-bar");
@@ -518,7 +862,7 @@
   }
 
   function initSpotlightCards() {
-    document.querySelectorAll(".facts-card, .skill-card, .edu-card, .project-card").forEach(function (card) {
+    document.querySelectorAll(".facts-card, .skill-card, .edu-card, .project-card, .about-card-portrait, .contact-card").forEach(function (card) {
       if (card.dataset.spotlightReady) return;
       card.dataset.spotlightReady = "true";
       card.addEventListener("pointermove", function (event) {
@@ -537,29 +881,18 @@
       var rect = portrait.getBoundingClientRect();
       var x = (event.clientX - rect.left) / rect.width - 0.5;
       var y = (event.clientY - rect.top) / rect.height - 0.5;
-      portrait.style.transform = "perspective(700px) rotateX(" + (-y * 5) + "deg) rotateY(" + (x * 5) + "deg)";
+      portrait.style.transform = "perspective(700px) rotateX(" + (-y * 6) + "deg) rotateY(" + (x * 6) + "deg)";
     });
     portrait.addEventListener("pointerleave", function () { portrait.style.transform = ""; });
   }
 
-  /* ------------------------------------------------------------------ *
-   * 12. FOOTER YEAR
-   * ------------------------------------------------------------------ */
   function initFooterYear() {
     var yearEl = document.getElementById("footer-year");
     if (yearEl) yearEl.textContent = new Date().getFullYear();
   }
 
   /* ------------------------------------------------------------------ *
-   * 12. CONTACT FORM (Formspree / EmailJS ready)
-   *
-   * Default wiring uses Formspree: replace the `action` attribute on the
-   * <form id="contact-form"> in index.html with your own endpoint,
-   * e.g. https://formspree.io/f/xxxxabcd — no JS changes required.
-   *
-   * To use EmailJS instead: include the EmailJS SDK script tag in
-   * index.html, then swap the fetch() call below for
-   * emailjs.send(SERVICE_ID, TEMPLATE_ID, formValues, PUBLIC_KEY).
+   * 17. CONTACT FORM (Optional Formspree Support)
    * ------------------------------------------------------------------ */
   function initContactForm() {
     var form = document.getElementById("contact-form");
@@ -573,14 +906,24 @@
       var formData = new FormData(form);
 
       if (form.getAttribute("action").indexOf("YOUR_FORM_ID") !== -1) {
-        status.textContent = "Set your Formspree endpoint in the form's \"action\" attribute (see README.md).";
-        status.className = "form-status error";
+        // Compose default email client
+        var name = (document.getElementById("name") || {}).value || "";
+        var email = (document.getElementById("email") || {}).value || "";
+        var message = (document.getElementById("message") || {}).value || "";
+        var mailtoUrl = "mailto:" + EMAIL_ADDRESS + "?subject=" + encodeURIComponent("Message from " + name + " via Portfolio") + "&body=" + encodeURIComponent("From: " + name + " (" + email + ")\n\n" + message);
+        window.location.href = mailtoUrl;
+        if (status) {
+          status.className = "form-status success";
+          status.textContent = "Opening your email client to send message...";
+        }
         return;
       }
 
-      submitBtn.disabled = true;
-      status.className = "form-status";
-      status.textContent = data.formSending || "Sending…";
+      if (submitBtn) submitBtn.disabled = true;
+      if (status) {
+        status.className = "form-status";
+        status.textContent = data.formSending || "Sending…";
+      }
 
       fetch(form.action, {
         method: "POST",
@@ -589,18 +932,25 @@
       })
         .then(function (res) {
           if (res.ok) {
-            status.textContent = data.formSuccess || "Thanks — your message has been sent.";
-            status.className = "form-status success";
+            if (status) {
+              status.textContent = data.formSuccess || "Thanks — your message has been sent.";
+              status.className = "form-status success";
+            }
             form.reset();
+            showToast("Message sent successfully!");
           } else {
             throw new Error("Form submission failed");
           }
         })
         .catch(function () {
-          status.textContent = data.formError || "Something went wrong. Please try again, or email me directly.";
-          status.className = "form-status error";
+          if (status) {
+            status.textContent = data.formError || "Something went wrong. Please try again, or email me directly.";
+            status.className = "form-status error";
+          }
         })
-        .then(function () { submitBtn.disabled = false; });
+        .then(function () {
+          if (submitBtn) submitBtn.disabled = false;
+        });
     });
   }
 
@@ -616,6 +966,10 @@
     initActiveNavigation();
     initHeroPointer();
     initFooterYear();
+    initProjectFilters();
+    initEmailCopy();
+    initTerminalCLI();
+    initKeyboardShortcuts();
     initContactForm();
     initLanguage();
   });

@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Anikit Kumar Chaudhary — Software Engineer | Java & Spring Boot",
-    "description": "Software Engineer mit 3,5+ Jahren Erfahrung in Java- und Spring-Boot-Backend- und Full-Stack-Anwendungen für Telekommunikations- und Logistikplattformen. M.Sc.-Kandidat für Angewandte Informatik in Deutschland.",
+    "description": "Software Engineer mit 3+ Jahren Berufserfahrung in Java-/Spring-Boot-Anwendungen, Microservices und REST-APIs für Telekommunikations- und Unternehmenssysteme. M.Sc.-Kandidat für Angewandte Informatik an der Hochschule Schmalkalden.",
     "ogTitle": "Anikit Kumar Chaudhary — Software Engineer | Java & Spring Boot",
     "ogDescription": "Software Engineer mit Schwerpunkt Java, Spring Boot, Microservices, REST-APIs, AWS, Docker und CI/CD."
   },
@@ -23,23 +23,25 @@
     "greeting": "whoami",
     "name": "Anikit Kumar Chaudhary",
     "title": "Java & Spring Boot · Backend & Full-Stack",
-    "tagline": "Zuverlässige Microservices und REST-APIs mit AWS, Docker und CI/CD entwickeln — von Telekommunikationsplattformen für 5 Mio.+ Nutzer bis zu cloudfähigen Produktsystemen.",
-    "availability": "Offen für Werkstudenten- und Teilzeitstellen in Deutschland",
+    "tagline": "Software Engineer mit 3+ Jahren Erfahrung in Java-/Spring-Boot-Anwendungen, Microservices und REST-APIs für Telekommunikations- und Unternehmenssysteme. Erfahren in Performance-Optimierung, Systemintegrationen, sicherer Authentifizierung, Production Support und CI/CD.",
+    "availability": "Verfügbar für 20 Stunden pro Woche · Werkstudent & Teilzeit in Deutschland",
     "ctaResume": "Lebenslauf herunterladen",
     "ctaContact": "Kontakt aufnehmen",
     "photoAlt": "Porträt von Anikit Kumar Chaudhary",
     "scrollHint": "Zum Entdecken scrollen",
-    "stat1Value": "3,5+",
-    "stat1Label": "Jahre Erfahrung",
+    "stat1Value": "3+",
+    "stat1Label": "Jahre Berufserfahrung",
     "stat2Value": "5 Mio.+",
     "stat2Label": "Betreute Nutzer",
     "stat3Value": "~150ms",
-    "stat3Label": "Erreichte API-Antwortzeit"
+    "stat3Label": "Erreichte API-Antwortzeit",
+    "cliHint": "Interaktives Terminal (` oder Klick)",
+    "availabilityDetail": "Werkstudent / Teilzeit in Deutschland (bis zu 20 Std./Woche) · Hybrid / Remote"
   },
   "about": {
     "eyebrow": "Über mich",
     "heading": "Wer ich bin",
-    "summary": "Ich bin Software Engineer mit 3,5+ Jahren Berufserfahrung in Backend- und Full-Stack-Anwendungen für Telekommunikations- und Logistikplattformen. Mein Schwerpunkt liegt auf Java, Spring Boot, REST-APIs, Microservices, PostgreSQL, Redis, React und TypeScript. Ich habe an Systemen für Millionen von Nutzern gearbeitet, die API-Performance verbessert, sichere OAuth2/JWT-APIs gebaut und cloudfähige Deployments mit Docker, Jenkins und AWS umgesetzt. Parallel zum M.Sc.-Studium Angewandte Informatik an der Hochschule Schmalkalden suche ich Werkstudenten- und Teilzeitstellen im Software Engineering.",
+    "summary": "Software Engineer mit 3+ Jahren Berufserfahrung in Java-/Spring-Boot-Anwendungen, Microservices und REST-APIs für Telekommunikations- und Unternehmenssysteme. Erfahren in Performance-Optimierung, Systemintegrationen, sicherer Authentifizierung, Production Support und CI/CD. Derzeit M.Sc. Angewandte Informatik an der Hochschule Schmalkalden. Verfügbar für 20 Stunden pro Woche.",
     "recruiterLabel": "Mein Mehrwert",
     "recruiterValue": "Produktionserfahrung mit verteilten Backend-Systemen, messbare Performance-Gewinne und ein praxisorientierter Full-Stack-Blick.",
     "photoAlt": "Porträt von Anikit Kumar Chaudhary",
@@ -49,26 +51,25 @@
     "factStudyLabel": "Aktuelles Studium",
     "factStudyValue": "M.Sc. Angewandte Informatik, Hochschule Schmalkalden",
     "factAvailabilityLabel": "Verfügbarkeit",
-    "factAvailabilityValue": "Suche Werkstudenten- / Teilzeitstellen",
+    "factAvailabilityValue": "Verfügbar für 20 Stunden pro Woche (Werkstudent / Teilzeit)",
     "factLanguagesLabel": "Sprachkenntnisse",
-    "factLanguagesValue": "Nepali (Muttersprache), Englisch (verhandlungssicher), Hindi (beruflich), Deutsch (eingeschränkte Arbeitskenntnisse)",
+    "factLanguagesValue": "Nepali (Muttersprache), Englisch (C1), Hindi (C1), Deutsch (A2 — aktiv lernend)",
     "factCertificationsLabel": "Zertifizierungen",
-    "factCertificationsValue": "CNSS Certified Network Security Specialist · Introduction to Cybersecurity · Cyber@ANZ Program · Introduction to Programming Using JavaScript · Software Engineering Virtual Experience"
+    "factCertificationsValue": "AWS Essential Training for Developers · CNSS Certified Network Security Specialist · Introduction to Cybersecurity · Introduction to Programming Using JavaScript · Software Engineering Virtual Experience"
   },
   "skills": {
     "eyebrow": "Fähigkeiten",
     "heading": "Womit ich arbeite",
-    "subheading": "Werkzeuge und Technologien, mit denen ich Backend-Systeme entwerfe, baue und ausliefere.",
+    "subheading": "Werkzeuge und Technologien, die ich zum Entwerfen, Bauen und Ausliefern von Softwaresystemen verwende.",
     "categories": {
       "languages": "Programmiersprachen",
       "backend": "Backend",
       "frontend": "Frontend",
       "databases": "Datenbanken",
       "cloud": "Cloud & DevOps",
-      "security": "Sicherheit",
-      "testing": "Testing",
-      "tools": "Werkzeuge",
-      "methodologies": "Methoden"
+      "security": "Sicherheit & Testing",
+      "tools": "Tools & Methoden",
+      "ai": "KI & Generative KI"
     }
   },
   "experience": {
@@ -76,34 +77,104 @@
     "heading": "Wo ich gearbeitet habe",
     "items": [
       {
-        "role": "Software Developer",
+        "role": "Software Development Engineer",
         "company": "Pelatro Solution Pvt. Ltd.",
-        "location": "Bangalore, Indien",
-        "dates": "Aug 2022 — Jul 2025",
+        "location": "Karnataka, Indien",
+        "dates": "Aug 2023 — Jul 2025",
         "bullets": [
-          "Skalierbare Microservices mit Java 11, Spring Boot und PostgreSQL für Telekommunikationsplattformen mit 5 Mio.+ Nutzern entworfen und betreut.",
-          "API-Antwortzeit durch verteiltes Redis-Caching und Beseitigung von N+1-Abfragemustern in JPA von ~800ms auf ~150ms reduziert.",
-          "Hochverfügbare REST-APIs mit Anbindung an 6+ externe Drittsysteme entwickelt und Integrationsfehler um 30% reduziert.",
-          "OAuth2- + JWT-Authentifizierung mit rollenbasierter Zugriffskontrolle und Audit-Logging für sicheren Mandantenzugriff implementiert.",
-          "Services mit Docker containerisiert und Deployments über Jenkins-CI/CD-Pipelines automatisiert, Release-Zyklus um ~25% verkürzt.",
-          "Echtzeit-Analyse-Dashboards mit Angular 12 und HighCharts.js für KPI-Visualisierung im Telekom-Betrieb entwickelt.",
-          "Bearbeitung von Produktionsvorfällen geleitet und 2 Junior-Entwickler in Backend- und Frontend-Best-Practices betreut."
+          "Java 11/Spring Boot-Microservices für Telekommunikationsplattformen mit über 5 Millionen Nutzern entwickelt und gewartet — Fokus auf Zuverlässigkeit und Performance.",
+          "API-Antwortzeiten von ca. 800 ms auf 150 ms reduziert durch Einführung von Redis-Caching und Optimierung von JPA-Abfragen.",
+          "REST-API-Integrationen mit 6+ externen Systemen gebaut und die Zuverlässigkeit durch strukturiertes Fehlerhandling und Retry-Logik verbessert, Integrationsfehler um 30 % reduziert.",
+          "OAuth2/JWT-Authentifizierung, rollenbasierte Zugriffskontrolle und Audit-Logging für eine mandantenfähige Umgebung implementiert.",
+          "Docker-basierte Deployments und CI/CD-Workflows mit Jenkins und GitHub Actions verbessert, Releasezykluszeit um ca. 25 % reduziert.",
+          "Echtzeit-Analysedashboards entwickelt, Produktionsvorfälle unterstützt und zwei Juniorentwickler in Backend- und Frontend-Entwicklung betreut."
         ],
-        "tech": ["Java 11", "Spring Boot", "PostgreSQL", "Redis", "JPA", "REST APIs", "OAuth2", "JWT", "Docker", "Jenkins", "CI/CD", "Angular 12", "HighCharts.js", "AWS (EC2, S3, Lambda)"]
+        "tech": [
+          "Java",
+          "Spring Boot",
+          "PostgreSQL",
+          "Redis",
+          "JPA",
+          "REST APIs",
+          "OAuth2",
+          "JWT",
+          "RBAC",
+          "Docker",
+          "Jenkins",
+          "GitHub Actions",
+          "CI/CD",
+          "Angular 12",
+          "HighCharts.js",
+          "AWS"
+        ]
+      },
+      {
+        "role": "Software Development Engineer Trainee",
+        "company": "Pelatro Solution Pvt. Ltd.",
+        "location": "Bengaluru, Indien",
+        "dates": "Aug 2022 — Jul 2023",
+        "bullets": [
+          "Eigenständige Backend-Features innerhalb von drei Monaten nach Eintritt ausgeliefert; an der Zerlegung einer Legacy-Monolith-Anwendung in unabhängig deploybare Spring-Boot-Microservices mitgewirkt.",
+          "15+ komplexe SQL-Abfragen und Stored Procedures in PostgreSQL optimiert, durchschnittliche Ausführungszeit um bis zu 40 % reduziert.",
+          "Unit- und Integrationstests mit JUnit 5 geschrieben, Testabdeckung für kritische Zahlungsverarbeitungsmodule verbessert.",
+          "Services mit Docker containerisiert und zu Jenkins-Deployment-Workflows im Rahmen der Microservices-Migrationsinitiative beigetragen."
+        ],
+        "tech": [
+          "Java",
+          "Spring Boot",
+          "PostgreSQL",
+          "SQL-Optimierung",
+          "JUnit 5",
+          "Integrationstests",
+          "Docker",
+          "Jenkins",
+          "Microservices"
+        ]
       },
       {
         "role": "Associate Application Developer Engineer",
-        "company": "UNISYS Global Services",
+        "company": "Unisys Global Services",
         "location": "Bangalore, Indien",
-        "dates": "Okt 2021 — Jun 2022",
+        "dates": "Apr 2022 — Jul 2022",
         "bullets": [
-          "Module für Logistik- und Frachterlösbuchhaltung in Java/Spring Boot für ein hohes Volumen an Finanztransaktionen entwickelt und betreut.",
-          "Bearbeitungszeit für Produktionsprobleme durch systematische Log-Analyse mit Linux-Tools und SQL-Profiling um ~25% reduziert.",
-          "An CI/CD-Verbesserungen in Jenkins mitgewirkt und dadurch Deployment-Hürden für das Team verringert.",
-          "REST-API-Endpunkte und Backend-Module unter Anleitung entwickelt; an Bugfixes und Unit-Tests mit JUnit mitgewirkt.",
-          "Produktionsprobleme analysiert und beim Debugging Java-basierter Unternehmensanwendungen für Banking-/IT-Kunden unterstützt."
+          "Enterprise-Logistik- und Fracht-Revenue-Accounting-Module in Java und Spring Boot für Luftfahrt-Kunden mit hohem Transaktionsvolumen entwickelt und gewartet.",
+          "Lösungszeit für Produktionsprobleme um ca. 25 % reduziert durch systematische Log-Analyse und SQL-Profiling in Java-basierten Bank- und IT-Systemen.",
+          "Zu Jenkins-CI/CD-Pipeline-Verbesserungen beigetragen, manuelle Deployment-Schritte und Reibung im Team reduziert.",
+          "REST-API-Endpunkte und Backend-Module gebaut; Features eigenständig ausgeliefert und Bug-Fixes mit JUnit-Tests unterstützt."
         ],
-        "tech": ["Java", "Spring Boot", "SQL", "Oracle", "Stored Procedures", "JUnit", "Jenkins", "CI/CD", "Linux", "Log Analysis", "REST APIs"]
+        "tech": [
+          "Java",
+          "Spring Boot",
+          "SQL",
+          "Oracle",
+          "Stored Procedures",
+          "JUnit",
+          "Jenkins",
+          "CI/CD",
+          "Linux",
+          "Log-Analyse",
+          "REST APIs"
+        ]
+      },
+      {
+        "role": "Associate Application Developer Engineer Trainee",
+        "company": "Unisys Global Services",
+        "location": "Bangalore, Indien",
+        "dates": "Okt 2021 — Mär 2022",
+        "bullets": [
+          "REST-API-Endpunkte und Backend-Module unter Mentorship in einer Java- und Spring-Boot-Enterprise-Umgebung gebaut.",
+          "Zu Bug-Fixes und Unit-Tests mit JUnit in Java-basierten Anwendungen für Bank- und IT-Kunden beigetragen.",
+          "Produktionsprobleme analysiert und Debugging von Enterprise-Java-Anwendungen unterstützt — systematische Log-Lese- und SQL-Profiling-Fähigkeiten entwickelt."
+        ],
+        "tech": [
+          "Java",
+          "Spring Boot",
+          "REST APIs",
+          "JUnit",
+          "SQL",
+          "Linux",
+          "Log-Analyse"
+        ]
       }
     ]
   },
@@ -115,35 +186,97 @@
         "degree": "M.Sc. Angewandte Informatik",
         "school": "Hochschule Schmalkalden",
         "location": "Schmalkalden, Deutschland",
-        "dates": "Okt 2025 — Okt 2027"
+        "dates": "Okt 2025 — heute"
       },
       {
-        "degree": "Bachelor of Engineering, Informatik",
+        "degree": "B.E. Informatik & Ingenieurwesen",
         "school": "Visvesvaraya Technological University (KNS Institute of Technology)",
         "location": "Indien",
         "dates": "Sep 2017 — Jun 2021",
         "extra": "Abschlussnote: 7,82"
-      },
-      {
-        "degree": "Höhere Sekundarstufe (XII)",
-        "school": "Hetauda School of Management & Social Science",
-        "location": "Hetauda, Nepal",
-        "dates": "2014 — 2016",
-        "website": "https://hsm.edu.np"
       }
     ],
-    "internshipHeading": "Praktikum",
+    "internshipHeading": "Ausbildung & virtuelle Erfahrung",
     "internshipItem": {
-      "role": "Praktikant",
+      "role": "Full-Stack-Entwicklungstraining",
       "company": "QSpiders",
       "dates": "Apr 2021 — Sep 2021",
+      "location": "Bengaluru, Indien",
       "bullets": [
-        "Strukturiertes Full-Stack-Entwicklungstraining mit praktischer Projektarbeit absolviert und End-to-End-Webanwendungen mit Java, SQL, HTML, CSS und JavaScript entwickelt.",
-        "Normalisierte Datenbankschemata entworfen und CRUD-Operationen implementiert.",
-        "Grundlegende Kenntnisse in Backend-Logik, relationalen Datenbanken und Frontend-Integration erworben."
+        "Praktische Ausbildung in Java, SQL, HTML, CSS, JavaScript, relationaler Datenbankgestaltung und CRUD-Operationen.",
+        "End-to-End-Webanwendungen gebaut und normalisierte Datenbankschemata entworfen."
       ],
-      "tech": ["Java", "SQL", "HTML5", "CSS3", "JavaScript", "Database Schema Design", "CRUD Operations"]
-    }
+      "tech": [
+        "Java",
+        "SQL",
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "Datenbankschema-Design",
+        "CRUD-Operationen"
+      ]
+    },
+    "trainingItems": [
+      {
+        "role": "Full-Stack-Entwicklungstraining",
+        "company": "QSpiders",
+        "dates": "Apr 2021 — Sep 2021",
+        "location": "Bengaluru, Indien",
+        "bullets": [
+          "Praktische Ausbildung in Java, SQL, HTML, CSS, JavaScript, relationaler Datenbankgestaltung und CRUD-Operationen.",
+          "End-to-End-Webanwendungen gebaut und normalisierte Datenbankschemata entworfen."
+        ],
+        "tech": [
+          "Java",
+          "SQL",
+          "HTML5",
+          "CSS3",
+          "JavaScript",
+          "Datenbankschema-Design",
+          "CRUD-Operationen"
+        ]
+      },
+      {
+        "role": "Virtuelle Praktikumsplattform für Bachelor & Master",
+        "company": "Microsoft",
+        "dates": "Jul 2020",
+        "bullets": [
+          "Praktische Engineering-Module zu Cloud-Architektur, Systemdesign und Software-Problemlösung abgeschlossen."
+        ],
+        "tech": [
+          "Cloud-Architektur",
+          "Systemdesign"
+        ]
+      },
+      {
+        "role": "Software Engineering Virtual Experience",
+        "company": "J.P. Morgan",
+        "dates": "Jun 2020",
+        "bullets": [
+          "Schnittstelle zu Finanzdatenfeeds implementiert, Perspective-Visualisierungen umgesetzt und Fehler in Handelssystemkomponenten behoben."
+        ],
+        "tech": [
+          "Python",
+          "Finanz-Feeds",
+          "Datenvisualisierung"
+        ]
+      },
+      {
+        "role": "Frontend-Entwicklung",
+        "company": "Alpha Technology Group",
+        "dates": "Feb 2020 — Mär 2020",
+        "location": "Bengaluru, Indien",
+        "bullets": [
+          "Responsive UI-Module mit modernem JavaScript, HTML5 und CSS3 in Zusammenarbeit mit Senior-Entwicklern entwickelt."
+        ],
+        "tech": [
+          "JavaScript",
+          "HTML5",
+          "CSS3",
+          "Responsive Design"
+        ]
+      }
+    ]
   },
   "projects": {
     "eyebrow": "Projekte",
@@ -157,59 +290,119 @@
         "subtitle": "Open-Source-Contributor · Hochschule Schmalkalden",
         "dates": "Feb 2026 — Heute",
         "description": "Ich wirke an einer Open-Source-Full-Stack-Community-Plattform für Studierende der Hochschule Schmalkalden mit: Event-Anmeldung, Beiträge, Kommentare und Community-Funktionen. Dabei entwickle ich komponentenbasierte Features mit React, TypeScript und Tailwind CSS, integriere Supabase für Echtzeitdaten, Authentifizierung und Storage und nutze Prisma für Schema und Migrationen. Die Zusammenarbeit erfolgt über strukturierte Git-Commits, Feature-Arbeit, Bugfixes und UI-Verbesserungen.",
-        "tech": ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui", "Supabase", "Prisma", "PostgreSQL", "Git"],
-        "image": "assets/img/projects/hsm-developer-hub.png",
+        "tech": [
+          "React",
+          "TypeScript",
+          "Vite",
+          "Tailwind CSS",
+          "shadcn/ui",
+          "Supabase",
+          "Prisma",
+          "PostgreSQL",
+          "Git"
+        ],
+        "image": "assets/img/projects/hsm-developer-hub.webp",
         "codeUrl": "https://github.com/anikit013/hsm-developer-hub",
-        "liveUrl": ""
+        "liveUrl": "",
+        "category": "fullstack",
+        "badge": "Open Source"
       },
       {
         "title": "Air Quality Index Prediction",
         "subtitle": "KNSIT Bangalore",
         "dates": "Feb 2021 — Mai 2021",
         "description": "Linear Regression, Random Forest, Ridge/Lasso und XGBoost zur Vorhersage von Luftqualitätsindex-Werten aus Umweltsensordaten entwickelt und verglichen. Einen Python-Web-Scraper für reale Daten gebaut, Feature-Analyse und Modellbewertung durchgeführt und das beste Modell mit einem Frontend auf Heroku bereitgestellt.",
-        "tech": ["Python", "Jupyter Notebook", "Scikit-learn", "Linear Regression", "Random Forest", "Ridge/Lasso", "XGBoost", "Web Scraping", "HTML/CSS/JS"],
-        "image": "assets/img/projects/air-quality-prediction.png",
+        "tech": [
+          "Python",
+          "Jupyter Notebook",
+          "Scikit-learn",
+          "Linear Regression",
+          "Random Forest",
+          "Ridge/Lasso",
+          "XGBoost",
+          "Web Scraping",
+          "HTML/CSS/JS"
+        ],
+        "image": "assets/img/projects/air-quality-prediction.webp",
         "codeUrl": "https://github.com/anikit013/Air-Quality-Index-Machine-Learning",
-        "liveUrl": ""
+        "liveUrl": "",
+        "category": "ai",
+        "badge": "Machine Learning"
       },
       {
         "title": "Echtzeit-Telekommunikationsanalyseplattform",
-        "subtitle": "Berufliches Projekt · Pelatro Solution",
+        "subtitle": "Berufliches Projekt · Pelatro Solution Pvt. Ltd.",
         "dates": "2022 — 2025",
         "description": "Cloud-fähiges Analysesystem für die Echtzeitüberwachung von Millionen von Telekommunikationsnutzern entwickelt. Verteilte Caching-Schichten für hochparallelen Datenzugriff sowie interaktive KPI-Dashboards für Betriebsteams umgesetzt.",
-        "tech": ["Java 11", "Spring Boot", "PostgreSQL", "Redis", "Angular 12", "HighCharts.js", "AWS (EC2, S3, Lambda)"],
-        "image": "assets/img/projects/telecom-analytics.png",
+        "tech": [
+          "Java 11",
+          "Spring Boot",
+          "PostgreSQL",
+          "Redis",
+          "Angular 12",
+          "HighCharts.js",
+          "AWS (EC2, S3, Lambda)"
+        ],
+        "image": "assets/img/projects/telecom-analytics.webp",
         "codeUrl": "",
-        "liveUrl": ""
+        "liveUrl": "",
+        "category": "backend",
+        "badge": "Enterprise · Telecom"
       },
       {
         "title": "Microservices-Migrationsinitiative",
-        "subtitle": "Berufliches Projekt · Pelatro Solution",
+        "subtitle": "Berufliches Projekt · Pelatro Solution Pvt. Ltd.",
         "dates": "2022 — 2025",
         "description": "Die Zerlegung einer Legacy-Monolithanwendung in unabhängig deploybare Microservices geleitet. Services mit Docker containerisiert und automatisierte Deployment-Workflows mit Jenkins und GitHub Actions auf AWS etabliert.",
-        "tech": ["Java 11", "Spring Boot", "Microservices", "Docker", "Jenkins", "GitHub Actions", "AWS"],
-        "image": "assets/img/projects/microservices-migration.png",
+        "tech": [
+          "Java 11",
+          "Spring Boot",
+          "Microservices",
+          "Docker",
+          "Jenkins",
+          "GitHub Actions",
+          "AWS"
+        ],
+        "image": "assets/img/projects/microservices-migration.webp",
         "codeUrl": "",
-        "liveUrl": ""
+        "liveUrl": "",
+        "category": "backend",
+        "badge": "Enterprise · Microservices"
       },
       {
         "title": "Sicheres Authentifizierungsframework",
-        "subtitle": "Berufliches Projekt · Pelatro Solution",
+        "subtitle": "Berufliches Projekt · Pelatro Solution Pvt. Ltd.",
         "dates": "2022 — 2025",
         "description": "OAuth2- und JWT-basiertes Authentifizierungsframework mit rollenbasierter Zugriffskontrolle und Audit-Logging entworfen und implementiert, um den Zugriff in einer Multi-Service-Backend-Umgebung abzusichern.",
-        "tech": ["Spring Boot", "OAuth2", "JWT", "RBAC", "REST APIs", "PostgreSQL"],
-        "image": "assets/img/projects/secure-authentication.png",
+        "tech": [
+          "Spring Boot",
+          "OAuth2",
+          "JWT",
+          "RBAC",
+          "REST APIs",
+          "PostgreSQL"
+        ],
+        "image": "assets/img/projects/secure-authentication.webp",
         "codeUrl": "",
-        "liveUrl": ""
+        "liveUrl": "",
+        "category": "backend",
+        "badge": "Enterprise · Sicherheit"
       }
     ],
-    "addMoreNote": "Weitere Projektkarten hinzufügen, indem ein Eintrag im projects.items-Array jeder Sprachdatei kopiert wird."
+    "addMoreNote": "Weitere Projektkarten hinzufügen, indem ein Eintrag im projects.items-Array jeder Sprachdatei kopiert wird.",
+    "filters": {
+      "all": "Alle Projekte",
+      "backend": "Backend & Cloud",
+      "fullstack": "Full-Stack",
+      "ai": "KI & Machine Learning"
+    },
+    "enterpriseLabel": "Unternehmenssystem"
   },
   "contact": {
     "eyebrow": "Kontakt",
     "heading": "Lass uns sprechen",
     "subheading": "Offen für Werkstudentenstellen im Bereich Backend- und Full-Stack-Entwicklung. Melde dich gerne bei mir.",
-    "phoneLabel": "Anrufen",
+    "phoneLabel": "Telefon / WhatsApp",
     "emailLabel": "E-Mail senden",
     "linkedinLabel": "LinkedIn",
     "githubLabel": "GitHub",
@@ -223,10 +416,13 @@
     "formSubmit": "Nachricht senden",
     "formSending": "Wird gesendet…",
     "formSuccess": "Danke — deine Nachricht wurde gesendet. Ich melde mich bald.",
-    "formError": "Etwas ist schiefgelaufen. Bitte versuche es erneut oder schreib mir direkt eine E-Mail."
+    "formError": "Etwas ist schiefgelaufen. Bitte versuche es erneut oder schreib mir direkt eine E-Mail.",
+    "copyEmail": "E-Mail kopieren",
+    "copiedToast": "E-Mail in die Zwischenablage kopiert!",
+    "phoneValue": "+49 155 6576 2881"
   },
   "footer": {
-    "tagline": "Erstellt mit reinem HTML, CSS & JavaScript.",
+    "tagline": "Entwickelt mit nativem HTML, CSS & JavaScript.",
     "backToTop": "Nach oben",
     "rights": "Alle Rechte vorbehalten."
   }
