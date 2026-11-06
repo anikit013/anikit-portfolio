@@ -106,10 +106,16 @@
     document.documentElement.lang = lang;
     document.documentElement.dir = "ltr";
 
-    // Plain text content: [data-i18n="a.b.c"]
+    // Plain text / rich content: [data-i18n="a.b.c"]
     document.querySelectorAll("[data-i18n]").forEach(function (elm) {
       var val = byPath(data, elm.getAttribute("data-i18n"));
-      if (typeof val === "string") elm.textContent = val;
+      if (typeof val === "string") {
+        if (val.indexOf("<") !== -1 && val.indexOf(">") !== -1) {
+          elm.innerHTML = val;
+        } else {
+          elm.textContent = val;
+        }
+      }
     });
 
     // Attributes: [data-i18n-attr="attr1:path1|attr2:path2"]
@@ -400,8 +406,7 @@
    * ------------------------------------------------------------------ */
   function initTheme() {
     var stored = getStoredTheme();
-    var prefersLight = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
-    var theme = stored || (prefersLight ? "light" : "dark");
+    var theme = stored || "dark";
     document.body.setAttribute("data-theme", theme);
 
     var toggle = document.getElementById("theme-toggle");
@@ -512,8 +517,8 @@
         printLine("<span class='cli-hl'>Anikit Kumar Chaudhary</span> — Software Engineer");
         printLine("3+ years building Java/Spring Boot applications, microservices and REST APIs");
         printLine("for telecom and enterprise systems.");
-        printLine("Education: M.Sc. Applied Computer Science @ Hochschule Schmalkalden, Germany.");
-        printLine("Status: <span class='cli-success'>Available for 20 hours per week — Werkstudent &amp; part-time roles in Germany.</span>");
+        printLine("Education: M.Sc. Applied Computer Science @ Hochschule Schmalkalden.");
+        printLine("Status: <span class='cli-success'>Open to software engineering opportunities.</span>");
       },
       skills: function () {
         printLine("<span class='cli-hl'>Technical Skills:</span>");
@@ -536,11 +541,9 @@
       },
       contact: function () {
         printLine("<span class='cli-hl'>Contact Channels:</span>");
-        printLine("  Phone    : <a href='tel:+4915565762881' class='cli-link'>+49 155 6576 2881</a>");
         printLine("  Email    : <a href='mailto:anikit781@gmail.com' class='cli-link'>anikit781@gmail.com</a>");
         printLine("  LinkedIn : <a href='https://linkedin.com/in/anikit013' target='_blank' class='cli-link'>linkedin.com/in/anikit013</a>");
         printLine("  GitHub   : <a href='https://github.com/anikit013' target='_blank' class='cli-link'>github.com/anikit013</a>");
-        printLine("  Location : Schmalkalden, Germany");
       },
       email: function () {
         if (navigator.clipboard) {

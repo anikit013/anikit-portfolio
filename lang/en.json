@@ -1,9 +1,9 @@
 {
   "meta": {
-    "title": "Anikit Kumar Chaudhary — Software Engineer | Java & Spring Boot",
+    "title": "Anikit Kumar Chaudhary — Software Engineer",
     "description": "Software Engineer with 3+ years of professional experience building and supporting Java/Spring Boot applications, microservices and REST APIs for telecom and enterprise systems. M.Sc. Applied Computer Science candidate at Hochschule Schmalkalden, Germany.",
-    "ogTitle": "Anikit Kumar Chaudhary — Software Engineer | Java & Spring Boot",
-    "ogDescription": "Software Engineer specialising in Java, Spring Boot, microservices, REST APIs, AWS, Docker and CI/CD. Available for Werkstudent & part-time roles in Germany."
+    "ogTitle": "Anikit Kumar Chaudhary — Software Engineer",
+    "ogDescription": "Software Engineer with 3+ years of professional experience building enterprise systems, full-stack applications, and cloud solutions. M.Sc. Applied Computer Science candidate in Germany."
   },
   "nav": {
     "logo": "AKC",
@@ -21,37 +21,32 @@
   "hero": {
     "eyebrow": "Software Engineer",
     "greeting": "whoami",
+    "openTerminal": "Open Terminal",
     "name": "Anikit Kumar Chaudhary",
-    "title": "Java & Spring Boot · Backend & Full-Stack",
-    "tagline": "Software Engineer with 3+ years building and supporting Java/Spring Boot applications, microservices and REST APIs for telecom and enterprise systems. Experienced in performance optimisation, system integrations, secure authentication, production support and CI/CD.",
-    "availability": "Available for 20 hours per week · Werkstudent & part-time in Germany",
+    "tagline": "Building reliable, scalable software systems and modern web applications — from enterprise platforms serving 5M+ subscribers to cloud-ready full-stack solutions.",
     "ctaResume": "Download CV",
     "ctaContact": "Contact Me",
+    "ctaProjects": "View Projects",
     "photoAlt": "Portrait of Anikit Kumar Chaudhary",
     "scrollHint": "Scroll to explore",
     "stat1Value": "3+",
-    "stat1Label": "Years of professional experience",
+    "stat1Label": "Years of experience",
     "stat2Value": "5M+",
     "stat2Label": "Subscribers served",
     "stat3Value": "~150ms",
     "stat3Label": "API response time achieved",
-    "cliHint": "Interactive CLI (` or click)",
-    "availabilityDetail": "Available for 20 hours per week · Werkstudent & part-time in Germany"
+    "cliHint": "Interactive CLI (` or click)"
   },
   "about": {
     "eyebrow": "About",
     "heading": "Who I am",
-    "summary": "Software Engineer with 3+ years of professional experience building and supporting Java/Spring Boot applications, microservices and REST APIs for telecom and enterprise systems. Experienced in performance optimisation, system integrations, secure authentication, production support and CI/CD. Currently pursuing an M.Sc. in Applied Computer Science at Hochschule Schmalkalden. Available for 20 hours per week.",
+    "summary": "<p>I am a software engineer with 3+ years of enterprise experience designing, building, and maintaining production-grade applications and full-stack systems for high-volume telecommunications and logistics domains.</p><p>At Pelatro, I architected scalable Java 11 and Spring Boot microservices serving over 5 million subscribers, reduced API latency from ~800ms to ~150ms using Redis distributed caching and query optimisation, and integrated 6+ external third-party systems. In addition to backend engineering, I develop component-driven user interfaces with React, TypeScript, and Tailwind CSS, and incorporate AI-assisted development tools into my engineering workflow.</p><p>Currently pursuing an M.Sc. in Applied Computer Science at Hochschule Schmalkalden, I am actively seeking software engineering opportunities where I can solve complex technical challenges and deliver measurable business value.</p>",
     "recruiterLabel": "What I bring",
-    "recruiterValue": "Production experience across telecom and enterprise backend systems, measurable performance gains, and a practical full-stack mindset.",
+    "recruiterValue": "Production experience across telecom and enterprise backend systems, measurable performance gains (5× latency reduction, 25% faster releases), and a practical full-stack mindset.",
     "photoAlt": "Portrait of Anikit Kumar Chaudhary",
     "factsHeading": "Quick facts",
-    "factLocationLabel": "Location",
-    "factLocationValue": "Schmalkalden, Germany",
     "factStudyLabel": "Currently studying",
     "factStudyValue": "M.Sc. Applied Computer Science, Hochschule Schmalkalden",
-    "factAvailabilityLabel": "Availability",
-    "factAvailabilityValue": "Available for 20 hours per week (Werkstudent / part-time)",
     "factLanguagesLabel": "Languages spoken",
     "factLanguagesValue": "Nepali (native), English (C1), Hindi (C1), German (A2 — actively learning)",
     "factCertificationsLabel": "Certifications",
@@ -397,9 +392,8 @@
   },
   "contact": {
     "eyebrow": "Contact",
-    "heading": "Let's talk",
-    "subheading": "Open to Werkstudent opportunities in backend and full-stack development. Feel free to reach out.",
-    "phoneLabel": "Phone / WhatsApp",
+    "heading": "Let's build something.",
+    "subheading": "Feel free to reach out for software engineering opportunities, collaborations, or questions.",
     "emailLabel": "Email Me",
     "linkedinLabel": "LinkedIn",
     "githubLabel": "GitHub",
@@ -415,11 +409,10 @@
     "formSuccess": "Thanks — your message has been sent. I'll reply soon.",
     "formError": "Something went wrong. Please try again, or email me directly.",
     "copyEmail": "Copy Email",
-    "copiedToast": "Email copied to clipboard!",
-    "phoneValue": "+49 155 6576 2881"
+    "copiedToast": "Email copied to clipboard!"
   },
   "footer": {
-    "tagline": "Engineered with vanilla HTML, CSS & JavaScript.",
+    "tagline": "",
     "backToTop": "Back to top",
     "rights": "All rights reserved."
   }

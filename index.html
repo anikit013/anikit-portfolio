@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title data-i18n="meta.title">Anikit Kumar Chaudhary — Software Engineer | Java &amp; Spring Boot</title>
-<meta name="description" content="Software Engineer with 3+ years of professional experience building and supporting Java/Spring Boot applications, microservices and REST APIs for telecom and enterprise systems. M.Sc. Applied Computer Science candidate at Hochschule Schmalkalden, Germany." data-i18n-attr="content:meta.description">
+<title data-i18n="meta.title">Anikit Kumar Chaudhary — Software Engineer</title>
+<meta name="description" content="Software Engineer with 3+ years of professional experience building enterprise systems, full-stack applications, and cloud solutions. M.Sc. Applied Computer Science candidate at Hochschule Schmalkalden, Germany." data-i18n-attr="content:meta.description">
 <meta name="color-scheme" content="dark light">
 
 <!-- Open Graph / Social Sharing -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Anikit Kumar Chaudhary — Software Engineer | Java &amp; Spring Boot" data-i18n-attr="content:meta.ogTitle">
-<meta property="og:description" content="Software Engineer specialising in Java, Spring Boot, microservices, REST APIs, AWS, Docker and CI/CD." data-i18n-attr="content:meta.ogDescription">
+<meta property="og:title" content="Anikit Kumar Chaudhary — Software Engineer" data-i18n-attr="content:meta.ogTitle">
+<meta property="og:description" content="Software Engineer with 3+ years of professional experience building enterprise systems, full-stack applications, and cloud solutions. M.Sc. Applied Computer Science candidate in Germany." data-i18n-attr="content:meta.ogDescription">
 <meta property="og:image" content="assets/img/og-cover.jpg">
 <meta property="og:url" content="https://anikit013.github.io/anikit-portfolio/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Anikit Kumar Chaudhary — Software Engineer | Java &amp; Spring Boot">
+<meta name="twitter:title" content="Anikit Kumar Chaudhary — Software Engineer">
 <meta name="twitter:description" content="Software Engineer specialising in Java, Spring Boot, microservices, REST APIs, AWS, Docker and CI/CD.">
 <meta name="twitter:image" content="assets/img/og-cover.jpg">
 
@@ -35,12 +35,12 @@
     </a>
 
     <nav class="nav-links" id="nav-links" aria-label="Primary">
-      <a href="#about" data-i18n="nav.about">~/about</a>
-      <a href="#skills" data-i18n="nav.skills">~/skills</a>
-      <a href="#experience" data-i18n="nav.experience">~/experience</a>
-      <a href="#education" data-i18n="nav.education">~/education</a>
-      <a href="#projects" data-i18n="nav.projects">~/projects</a>
-      <a href="#contact" data-i18n="nav.contact">~/contact</a>
+      <a href="#hero" data-i18n="nav.home">Home</a>
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#experience" data-i18n="nav.experience">Experience</a>
+      <a href="#projects" data-i18n="nav.projects">Projects</a>
+      <a href="#skills" data-i18n="nav.skills">Skills</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
     </nav>
 
     <div class="nav-controls">
@@ -69,28 +69,45 @@
     <svg class="hero-mesh" id="hero-mesh" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true"></svg>
     <div class="hero-mesh-fade" aria-hidden="true"></div>
 
-    <div class="container">
+    <!-- Oversized Editorial Background Watermark -->
+    <div class="hero-editorial-watermark" aria-hidden="true">
+      <span class="watermark-text">PORT<span class="watermark-accent">FOLIO</span></span>
+    </div>
+
+    <div class="container hero-container">
       <div class="hero-copy">
-        <div class="hero-terminal-line" id="hero-terminal-trigger" role="button" tabindex="0" title="Click or press ` to launch interactive CLI">
-          <span class="prompt">$</span>
-          <span data-i18n="hero.greeting">whoami</span>
-          <span class="caret" aria-hidden="true"></span>
-          <span class="terminal-badge">CLI [ ` ]</span>
+        <!-- Interactive Terminal Launcher Pill -->
+        <div class="hero-terminal-pill" id="hero-terminal-trigger" role="button" tabindex="0" title="Click or press ` to launch interactive terminal">
+          <div class="terminal-pill-main">
+            <span class="terminal-pill-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="4 17 10 11 4 5"></polyline>
+                <line x1="12" y1="19" x2="20" y2="19"></line>
+              </svg>
+            </span>
+            <span class="prompt">$</span>
+            <span class="terminal-cmd" data-i18n="hero.greeting">whoami</span>
+            <span class="caret" aria-hidden="true"></span>
+          </div>
+          <div class="terminal-pill-badge">
+            <span class="beacon-dot" aria-hidden="true"></span>
+            <span class="badge-label" data-i18n="hero.openTerminal">Open Terminal</span>
+            <kbd class="badge-key">`</kbd>
+          </div>
         </div>
 
-        <p class="eyebrow" data-i18n="hero.eyebrow">Software Engineer</p>
-        <h1 data-i18n="hero.name">Anikit Kumar Chaudhary</h1>
-        <p class="role-title" data-i18n="hero.title">Java &amp; Spring Boot · Backend &amp; Full-Stack</p>
-        <p class="tagline" data-i18n="hero.tagline">Software Engineer with 3+ years building and supporting Java/Spring Boot applications, microservices and REST APIs for telecom and enterprise systems. Experienced in performance optimisation, system integrations, secure authentication, production support and CI/CD.</p>
-
-        <div class="availability-badge">
-          <span class="availability-dot" aria-hidden="true"></span>
-          <span data-i18n="hero.availability">Available for 20 hours per week · Werkstudent &amp; part-time in Germany</span>
+        <div class="hero-eyebrow-wrap">
+          <span class="editorial-tag">DEV.EDITION // 2026</span>
+          <p class="eyebrow" data-i18n="hero.eyebrow">Software Engineer</p>
         </div>
+
+        <h1 class="hero-name" data-i18n="hero.name">Anikit Kumar Chaudhary</h1>
+        <p class="tagline" data-i18n="hero.tagline">Building reliable, scalable software systems and modern web applications — from enterprise platforms serving 5M+ subscribers to cloud-ready full-stack solutions.</p>
 
         <div class="hero-cta">
-          <a class="btn btn-primary" href="assets/Anikit_CV.pdf" download data-i18n="hero.ctaResume">Download CV</a>
-          <a class="btn btn-ghost" href="#contact" data-i18n="hero.ctaContact">Contact Me</a>
+          <a class="btn btn-primary" href="#projects" data-i18n="hero.ctaProjects">View Projects</a>
+          <a class="btn btn-secondary" href="#contact" data-i18n="hero.ctaContact">Contact Me</a>
+          <a class="btn btn-ghost" href="assets/Anikit_CV.pdf" download data-i18n="hero.ctaResume">Download CV</a>
           <button type="button" class="btn btn-ghost copy-email-btn" data-i18n="contact.copyEmail">Copy Email</button>
         </div>
 
@@ -101,23 +118,27 @@
         </div>
       </div>
 
-      <!-- Hero portrait with ring orbits -->
+      <!-- Hero portrait with futuristic editorial card -->
       <div class="hero-portrait">
-        <div class="ring" aria-hidden="true"></div>
-        <div class="ring ring-2" aria-hidden="true"></div>
-        <span class="node" aria-hidden="true"></span>
-        <span class="node" aria-hidden="true"></span>
-        <span class="node" aria-hidden="true"></span>
-        <span class="node" aria-hidden="true"></span>
-        <div class="frame">
-          <img src="assets/img/hero-portrait.png" alt="Portrait of Anikit Kumar Chaudhary" data-i18n-attr="alt:hero.photoAlt" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-          <div class="initials-fallback" style="display:none;">AC</div>
+        <div class="portrait-card">
+          <div class="portrait-corner tl"></div>
+          <div class="portrait-corner tr"></div>
+          <div class="portrait-corner bl"></div>
+          <div class="portrait-corner br"></div>
+          <div class="frame">
+            <img src="assets/img/hero-portrait.png" alt="Portrait of Anikit Kumar Chaudhary" data-i18n-attr="alt:hero.photoAlt" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="initials-fallback" style="display:none;">AC</div>
+          </div>
+          <div class="portrait-badge">
+            <span class="live-pulse"></span>
+            <span class="badge-text">SYS.STATUS // ACTIVE</span>
+          </div>
         </div>
       </div>
     </div>
 
     <div class="scroll-hint">
-      <span data-i18n="hero.scrollHint">Scroll to explore</span>
+      <span class="scroll-text" data-i18n="hero.scrollHint">Scroll to explore</span>
       <span class="line" aria-hidden="true"></span>
     </div>
   </section>
@@ -135,35 +156,30 @@
         <div class="about-card-portrait reveal">
           <div class="about-portrait-wrap">
             <img src="assets/img/about-portrait.png" alt="Anikit Kumar Chaudhary portrait" loading="lazy">
-            <div class="about-status-chip">
-              <span class="live-dot" aria-hidden="true"></span>
-              <span>Werkstudent in Germany</span>
-            </div>
           </div>
           <div class="about-card-meta">
-            <div class="meta-row"><span>📍</span> Schmalkalden, Germany</div>
             <div class="meta-row"><span>🎓</span> M.Sc. Applied Computer Science</div>
-            <div class="meta-row"><span>⚡</span> 3.5+ Yrs Enterprise Backend</div>
+            <div class="meta-row"><span>⚡</span> 3+ Yrs Enterprise Experience</div>
           </div>
         </div>
 
         <div class="about-content">
-          <div class="about-summary reveal">
-            <p data-i18n="about.summary">Software Engineer with 3+ years of professional experience building and supporting Java/Spring Boot applications, microservices and REST APIs for telecom and enterprise systems. Experienced in performance optimisation, system integrations, secure authentication, production support and CI/CD. Currently pursuing an M.Sc. in Applied Computer Science at Hochschule Schmalkalden. Available for 20 hours per week.</p>
+          <div class="about-summary reveal" data-i18n="about.summary">
+            <p>I am a software engineer with 3+ years of enterprise experience designing, building, and maintaining production-grade applications and full-stack systems for high-volume telecommunications and logistics domains.</p>
+            <p>At Pelatro, I architected scalable Java 11 and Spring Boot microservices serving over 5 million subscribers, reduced API latency from ~800ms to ~150ms using Redis distributed caching and query optimisation, and integrated 6+ external third-party systems. In addition to backend engineering, I develop component-driven user interfaces with React, TypeScript, and Tailwind CSS, and incorporate AI-assisted development tools into my engineering workflow.</p>
+            <p>Currently pursuing an M.Sc. in Applied Computer Science at Hochschule Schmalkalden, I am actively seeking software engineering opportunities where I can solve complex technical challenges and deliver measurable business value.</p>
           </div>
 
           <div class="recruiter-note reveal">
             <span class="recruiter-note-label" data-i18n="about.recruiterLabel">What I bring</span>
-            <p data-i18n="about.recruiterValue">Production experience across telecom and enterprise backend systems, measurable performance gains, and a practical full-stack mindset.</p>
+            <p data-i18n="about.recruiterValue">Production experience across telecom and enterprise backend systems, measurable performance gains (5× latency reduction, 25% faster releases), and a practical full-stack mindset.</p>
           </div>
         </div>
 
         <div class="facts-card reveal">
           <h3 data-i18n="about.factsHeading">Quick facts</h3>
           <dl>
-            <div><dt data-i18n="about.factLocationLabel">Location</dt><dd data-i18n="about.factLocationValue">Schmalkalden, Germany</dd></div>
             <div><dt data-i18n="about.factStudyLabel">Currently studying</dt><dd data-i18n="about.factStudyValue">M.Sc. Applied Computer Science, Hochschule Schmalkalden</dd></div>
-            <div><dt data-i18n="about.factAvailabilityLabel">Availability</dt><dd data-i18n="about.factAvailabilityValue">Available for 20 hours per week (Werkstudent / part-time)</dd></div>
             <div><dt data-i18n="about.factLanguagesLabel">Languages spoken</dt><dd data-i18n="about.factLanguagesValue">Nepali (native), English (C1), Hindi (C1), German (A2 — actively learning)</dd></div>
             <div><dt data-i18n="about.factCertificationsLabel">Certifications</dt><dd data-i18n="about.factCertificationsValue">AWS Essential Training for Developers · CNSS Certified Network Security Specialist · Introduction to Cybersecurity · Introduction to Programming Using JavaScript · Software Engineering Virtual Experience</dd></div>
           </dl>
@@ -487,18 +503,10 @@
     <div class="container contact-grid">
       <div class="reveal">
         <p class="eyebrow" data-i18n="contact.eyebrow">Contact</p>
-        <h2 data-i18n="contact.heading">Let's talk</h2>
-        <p data-i18n="contact.subheading">Open to Werkstudent &amp; part-time opportunities in Germany. Feel free to reach out directly.</p>
+        <h2 data-i18n="contact.heading">Let's build something.</h2>
+        <p data-i18n="contact.subheading">Feel free to reach out for software engineering opportunities, collaborations, or questions.</p>
 
         <div class="contact-links">
-          <a class="contact-link" href="tel:+4915565762881">
-            <span class="icon-btn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.08 4.18 2 2 0 014.07 2h3a2 2 0 012 1.72c.12.9.33 1.78.62 2.64a2 2 0 01-.45 2.11L7.97 9.74a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.86.29 1.74.5 2.64.62A2 2 0 0122 16.92z"/></svg></span>
-            <div class="contact-link-text">
-              <span class="contact-link-label" data-i18n="contact.phoneLabel">Phone / WhatsApp</span>
-              <span class="contact-link-sub">+49 155 6576 2881</span>
-            </div>
-          </a>
-
           <a class="contact-link" href="mailto:anikit781@gmail.com?subject=Software%20Engineering%20Opportunity">
             <span class="icon-btn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M4 6l8 7 8-7"/></svg></span>
             <div class="contact-link-text">
@@ -590,7 +598,7 @@
 <footer class="site-footer">
   <div class="container">
     <p class="footer-tagline">
-      &copy; <span id="footer-year">2026</span> Anikit Kumar Chaudhary — <span data-i18n="footer.tagline">Engineered with vanilla HTML, CSS &amp; JavaScript.</span> <span data-i18n="footer.rights">All rights reserved.</span>
+      &copy; <span id="footer-year">2026</span> Anikit Kumar Chaudhary. <span data-i18n="footer.rights">All rights reserved.</span>
     </p>
 
     <div class="kbd-shortcuts-hint">

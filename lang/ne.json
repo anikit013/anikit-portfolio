@@ -1,19 +1,19 @@
 {
   "meta": {
-    "title": "अनिकित कुमार चौधरी — सफ्टवेयर इन्जिनियर | Java र Spring Boot",
+    "title": "अनिकित कुमार चौधरी — सफ्टवेयर इन्जिनियर",
     "description": "Java/Spring Boot एप्लिकेसन, माइक्रोसर्भिस र REST API मा ३+ वर्षको व्यावसायिक अनुभव भएका सफ्टवेयर इन्जिनियर। जर्मनीमा Hochschule Schmalkalden बाट M.Sc. Applied Computer Science अध्ययनरत।",
-    "ogTitle": "अनिकित कुमार चौधरी — सफ्टवेयर इन्जिनियर | Java र Spring Boot",
-    "ogDescription": "Java, Spring Boot, माइक्रोसर्भिस, REST API, AWS, Docker र CI/CD मा विशेषज्ञता भएका सफ्टवेयर इन्जिनियर।"
+    "ogTitle": "अनिकित कुमार चौधरी — सफ्टवेयर इन्जिनियर",
+    "ogDescription": "इन्टरप्राइज प्रणाली, फुल-स्ट्याक एप्लिकेसन र क्लाउड सोलुसन निर्माणमा ३+ वर्षको व्यावसायिक अनुभव भएका सफ्टवेयर इन्जिनियर। जर्मनीमा M.Sc. Applied Computer Science अध्ययनरत।"
   },
   "nav": {
     "logo": "AKC",
-    "home": "~/गृहपृष्ठ",
-    "about": "~/मेरो-बारेमा",
-    "skills": "~/सीपहरू",
-    "experience": "~/अनुभव",
-    "education": "~/शिक्षा",
-    "projects": "~/प्रोजेक्टहरू",
-    "contact": "~/सम्पर्क",
+    "home": "गृहपृष्ठ",
+    "about": "मेरो बारेमा",
+    "skills": "सीपहरू",
+    "experience": "अनुभव",
+    "education": "शिक्षा",
+    "projects": "प्रोजेक्टहरू",
+    "contact": "सम्पर्क",
     "themeToggle": "डार्क/लाइट थिम बदल्नुहोस्",
     "menuToggle": "नेभिगेसन मेनु खोल्नुहोस्",
     "langLabel": "भाषा"
@@ -21,37 +21,32 @@
   "hero": {
     "eyebrow": "सफ्टवेयर इन्जिनियर",
     "greeting": "whoami",
+    "openTerminal": "टर्मिनल खोल्नुहोस्",
     "name": "अनिकित कुमार चौधरी",
-    "title": "Java र Spring Boot · ब्याकइन्ड र फुल-स्ट्याक",
-    "tagline": "टेलिकम र इन्टरप्राइज प्रणालीका लागि Java/Spring Boot एप्लिकेसन, माइक्रोसर्भिस र REST API निर्माण तथा समर्थनमा ३+ वर्षको व्यावसायिक अनुभव। Performance optimisation, system integration, सुरक्षित प्रमाणीकरण, production support र CI/CD मा अनुभवी।",
-    "availability": "हप्ताको २० घण्टा उपलब्ध · जर्मनीमा Werkstudent र part-time",
+    "tagline": "५० लाख+ प्रयोगकर्ता भएका इन्टरप्राइज प्लेटफर्मदेखि cloud-ready फुल-स्ट्याक प्रणालीसम्म — भरपर्दो र उच्च-कार्यक्षमतायुक्त सफ्टवेयर निर्माण गर्छु।",
     "ctaResume": "CV डाउनलोड गर्नुहोस्",
     "ctaContact": "सम्पर्क गर्नुहोस्",
+    "ctaProjects": "परियोजनाहरू हेर्नुहोस्",
     "photoAlt": "अनिकित कुमार चौधरीको तस्बिर",
     "scrollHint": "थप हेर्न स्क्रोल गर्नुहोस्",
     "stat1Value": "३+",
-    "stat1Label": "वर्षको व्यावसायिक अनुभव",
+    "stat1Label": "वर्षको अनुभव",
     "stat2Value": "५०लाख+",
     "stat2Label": "सेवा पुगेका प्रयोगकर्ता",
     "stat3Value": "~१५०ms",
     "stat3Label": "हासिल गरिएको API प्रतिक्रिया समय",
-    "cliHint": "इन्टरएक्टिभ टर्मिनल (` वा क्लिक)",
-    "availabilityDetail": "जर्मनीमा Werkstudent / Part-time (२० घण्टा/हप्ता सम्म) · Hybrid / Remote"
+    "cliHint": "इन्टरएक्टिभ टर्मिनल (` वा क्लिक)"
   },
   "about": {
     "eyebrow": "मेरो बारेमा",
     "heading": "म को हुँ",
-    "summary": "टेलिकम र इन्टरप्राइज प्रणालीका लागि Java/Spring Boot एप्लिकेसन, माइक्रोसर्भिस र REST API निर्माण तथा समर्थनमा ३+ वर्षको व्यावसायिक अनुभव भएको सफ्टवेयर इन्जिनियर। Performance optimisation, system integration, सुरक्षित प्रमाणीकरण, production support र CI/CD मा अनुभवी। हाल Hochschule Schmalkalden मा M.Sc. Applied Computer Science अध्ययनरत। हप्ताको २० घण्टा उपलब्ध।",
+    "summary": "<p>म उच्च-volume दूरसञ्चार तथा लजिस्टिक्स क्षेत्रका लागि भरपर्दो सफ्टवेयर तथा फुल-स्ट्याक प्रणाली निर्माणमा ३+ वर्षको इन्टरप्राइज अनुभव भएको सफ्टवेयर इन्जिनियर हुँ।</p><p>Pelatro मा ५० लाखभन्दा बढी प्रयोगकर्तालाई सेवा दिने Java 11 र Spring Boot माइक्रोसर्भिस डिजाइन गरें, Redis caching र query optimisation मार्फत API latency ५ गुणा घटाएँ, र ६+ बाह्य प्रणालीसँग सुरक्षित integration गरें। साथै React, TypeScript र Tailwind CSS मार्फत आधुनिक UI निर्माण गर्छु र AI-assisted engineering प्रयोग गर्छु।</p><p>हाल Hochschule Schmalkalden मा M.Sc. Applied Computer Science अध्ययनरत रहँदै म सफ्टवेयर इन्जिनियरिङमा नयाँ अवसरहरूको खोजीमा छु जहाँ म जटिल प्राविधिक चुनौतीहरू समाधान गर्न सकूँ।</p>",
     "recruiterLabel": "मेरो योगदान",
-    "recruiterValue": "डिस्ट्रिब्युटेड ब्याकइन्ड प्रणालीको production अनुभव, मापनयोग्य performance सुधार र व्यावहारिक full-stack सोच।",
+    "recruiterValue": "डिस्ट्रिब्युटेड ब्याकइन्ड प्रणालीको production अनुभव, मापनयोग्य performance सुधार (५ गुणा छिटो API, २५% छिटो release) र व्यावहारिक full-stack सोच।",
     "photoAlt": "अनिकित कुमार चौधरीको तस्बिर",
     "factsHeading": "छोटो चिनारी",
-    "factLocationLabel": "स्थान",
-    "factLocationValue": "श्मालकाल्डेन, जर्मनी",
     "factStudyLabel": "हालको अध्ययन",
     "factStudyValue": "M.Sc. Applied Computer Science, Hochschule Schmalkalden",
-    "factAvailabilityLabel": "उपलब्धता",
-    "factAvailabilityValue": "हप्ताको २० घण्टा उपलब्ध (Werkstudent / part-time)",
     "factLanguagesLabel": "बोल्ने भाषाहरू",
     "factLanguagesValue": "नेपाली (मातृभाषा), अंग्रेजी (C1), हिन्दी (C1), जर्मन (A2 — सक्रिय रूपमा सिक्दै)",
     "factCertificationsLabel": "प्रमाणपत्रहरू",
@@ -400,9 +395,8 @@
   },
   "contact": {
     "eyebrow": "सम्पर्क",
-    "heading": "कुरा गरौं",
-    "subheading": "ब्याकइन्ड र फुल-स्ट्याक विकासमा Werkstudent अवसरहरूको लागि उपलब्ध छु। निःसंकोच सम्पर्क गर्नुहोस्।",
-    "phoneLabel": "फोन / WhatsApp",
+    "heading": "आउनुहोस् केही नयाँ बनाऔं।",
+    "subheading": "सफ्टवेयर इन्जिनियरिङ अवसर, सहकार्य वा प्रश्नहरूको लागि निःसंकोच सम्पर्क गर्नुहोस्।",
     "emailLabel": "इमेल पठाउनुहोस्",
     "linkedinLabel": "LinkedIn",
     "githubLabel": "GitHub",
@@ -418,11 +412,10 @@
     "formSuccess": "धन्यवाद — तपाईंको सन्देश पठाइयो। म चाँडै जवाफ दिनेछु।",
     "formError": "केही गडबड भयो। कृपया पुनः प्रयास गर्नुहोस्, वा सिधै मलाई इमेल गर्नुहोस्।",
     "copyEmail": "इमेल कपी गर्नुहोस्",
-    "copiedToast": "इमेल क्लिपबोर्डमा कपी भयो!",
-    "phoneValue": "+49 155 6576 2881"
+    "copiedToast": "इमेल क्लिपबोर्डमा कपी भयो!"
   },
   "footer": {
-    "tagline": "सादा HTML, CSS र JavaScript प्रयोग गरी निर्मित।",
+    "tagline": "",
     "backToTop": "माथि जानुहोस्",
     "rights": "सर्वाधिकार सुरक्षित।"
   }

@@ -1,19 +1,19 @@
 {
   "meta": {
-    "title": "Anikit Kumar Chaudhary — Software Engineer | Java & Spring Boot",
+    "title": "Anikit Kumar Chaudhary — Software Engineer",
     "description": "Software Engineer mit 3+ Jahren Berufserfahrung in Java-/Spring-Boot-Anwendungen, Microservices und REST-APIs für Telekommunikations- und Unternehmenssysteme. M.Sc.-Kandidat für Angewandte Informatik an der Hochschule Schmalkalden.",
-    "ogTitle": "Anikit Kumar Chaudhary — Software Engineer | Java & Spring Boot",
-    "ogDescription": "Software Engineer mit Schwerpunkt Java, Spring Boot, Microservices, REST-APIs, AWS, Docker und CI/CD."
+    "ogTitle": "Anikit Kumar Chaudhary — Software Engineer",
+    "ogDescription": "Software Engineer mit 3+ Jahren Berufserfahrung in Unternehmenssystemen, Full-Stack-Anwendungen und Cloud-Lösungen. M.Sc.-Kandidat für Angewandte Informatik in Deutschland."
   },
   "nav": {
     "logo": "AKC",
-    "home": "~/start",
-    "about": "~/ueber-mich",
-    "skills": "~/faehigkeiten",
-    "experience": "~/erfahrung",
-    "education": "~/ausbildung",
-    "projects": "~/projekte",
-    "contact": "~/kontakt",
+    "home": "Start",
+    "about": "Über mich",
+    "skills": "Fähigkeiten",
+    "experience": "Erfahrung",
+    "education": "Ausbildung",
+    "projects": "Projekte",
+    "contact": "Kontakt",
     "themeToggle": "Hell-/Dunkelmodus umschalten",
     "menuToggle": "Navigationsmenü umschalten",
     "langLabel": "Sprache"
@@ -21,37 +21,32 @@
   "hero": {
     "eyebrow": "Software Engineer",
     "greeting": "whoami",
+    "openTerminal": "Terminal öffnen",
     "name": "Anikit Kumar Chaudhary",
-    "title": "Java & Spring Boot · Backend & Full-Stack",
-    "tagline": "Software Engineer mit 3+ Jahren Erfahrung in Java-/Spring-Boot-Anwendungen, Microservices und REST-APIs für Telekommunikations- und Unternehmenssysteme. Erfahren in Performance-Optimierung, Systemintegrationen, sicherer Authentifizierung, Production Support und CI/CD.",
-    "availability": "Verfügbar für 20 Stunden pro Woche · Werkstudent & Teilzeit in Deutschland",
+    "tagline": "Entwicklung zuverlässiger, hochperformanter Softwaresysteme und moderner Anwendungen — von Unternehmensplattformen für 5 Mio.+ Nutzer bis hin zu cloudfähigen Full-Stack-Lösungen.",
     "ctaResume": "Lebenslauf herunterladen",
     "ctaContact": "Kontakt aufnehmen",
+    "ctaProjects": "Projekte ansehen",
     "photoAlt": "Porträt von Anikit Kumar Chaudhary",
     "scrollHint": "Zum Entdecken scrollen",
     "stat1Value": "3+",
-    "stat1Label": "Jahre Berufserfahrung",
+    "stat1Label": "Jahre Erfahrung",
     "stat2Value": "5 Mio.+",
     "stat2Label": "Betreute Nutzer",
     "stat3Value": "~150ms",
     "stat3Label": "Erreichte API-Antwortzeit",
-    "cliHint": "Interaktives Terminal (` oder Klick)",
-    "availabilityDetail": "Werkstudent / Teilzeit in Deutschland (bis zu 20 Std./Woche) · Hybrid / Remote"
+    "cliHint": "Interaktives Terminal (` oder Klick)"
   },
   "about": {
     "eyebrow": "Über mich",
     "heading": "Wer ich bin",
-    "summary": "Software Engineer mit 3+ Jahren Berufserfahrung in Java-/Spring-Boot-Anwendungen, Microservices und REST-APIs für Telekommunikations- und Unternehmenssysteme. Erfahren in Performance-Optimierung, Systemintegrationen, sicherer Authentifizierung, Production Support und CI/CD. Derzeit M.Sc. Angewandte Informatik an der Hochschule Schmalkalden. Verfügbar für 20 Stunden pro Woche.",
+    "summary": "<p>Ich bin Software Engineer mit 3+ Jahren Unternehmenserfahrung in der Entwicklung, Skalierung und Wartung robuster Anwendungen und Full-Stack-Systeme für Telekommunikations- und Logistikplattformen.</p><p>Bei Pelatro habe ich Java 11- und Spring Boot-Microservices für über 5 Millionen Abonnenten entwickelt, API-Latenzen durch Redis-Caching und Abfrageoptimierung von ca. 800 ms auf 150 ms gesenkt und 6+ kritische Drittsysteme angebunden. Darüber hinaus erstelle ich moderne Benutzeroberflächen mit React, TypeScript und Tailwind CSS und nutze KI-gestützte Entwicklungsworkflows zur Effizienzsteigerung.</p><p>Parallel zu meinem M.Sc.-Studium in Angewandter Informatik an der Hochschule Schmalkalden suche ich neue Herausforderungen im Software Engineering, um anspruchsvolle Aufgaben zu lösen und echten Mehrwert zu schaffen.</p>",
     "recruiterLabel": "Mein Mehrwert",
-    "recruiterValue": "Produktionserfahrung mit verteilten Backend-Systemen, messbare Performance-Gewinne und ein praxisorientierter Full-Stack-Blick.",
+    "recruiterValue": "Produktionserfahrung mit hochbelastbaren Backend-Systemen, messbare Performance-Gewinne (5-fache Latenzsenkung, 25 % schnellere Releases) und eine strukturierte Full-Stack-Denkweise.",
     "photoAlt": "Porträt von Anikit Kumar Chaudhary",
     "factsHeading": "Kurzprofil",
-    "factLocationLabel": "Standort",
-    "factLocationValue": "Schmalkalden, Deutschland",
     "factStudyLabel": "Aktuelles Studium",
     "factStudyValue": "M.Sc. Angewandte Informatik, Hochschule Schmalkalden",
-    "factAvailabilityLabel": "Verfügbarkeit",
-    "factAvailabilityValue": "Verfügbar für 20 Stunden pro Woche (Werkstudent / Teilzeit)",
     "factLanguagesLabel": "Sprachkenntnisse",
     "factLanguagesValue": "Nepali (Muttersprache), Englisch (C1), Hindi (C1), Deutsch (A2 — aktiv lernend)",
     "factCertificationsLabel": "Zertifizierungen",
@@ -400,9 +395,8 @@
   },
   "contact": {
     "eyebrow": "Kontakt",
-    "heading": "Lass uns sprechen",
-    "subheading": "Offen für Werkstudentenstellen im Bereich Backend- und Full-Stack-Entwicklung. Melde dich gerne bei mir.",
-    "phoneLabel": "Telefon / WhatsApp",
+    "heading": "Lass uns etwas bauen.",
+    "subheading": "Melde dich gerne für Software-Engineering-Möglichkeiten, Kooperationen oder Fragen.",
     "emailLabel": "E-Mail senden",
     "linkedinLabel": "LinkedIn",
     "githubLabel": "GitHub",
@@ -418,11 +412,10 @@
     "formSuccess": "Danke — deine Nachricht wurde gesendet. Ich melde mich bald.",
     "formError": "Etwas ist schiefgelaufen. Bitte versuche es erneut oder schreib mir direkt eine E-Mail.",
     "copyEmail": "E-Mail kopieren",
-    "copiedToast": "E-Mail in die Zwischenablage kopiert!",
-    "phoneValue": "+49 155 6576 2881"
+    "copiedToast": "E-Mail in die Zwischenablage kopiert!"
   },
   "footer": {
-    "tagline": "Entwickelt mit nativem HTML, CSS & JavaScript.",
+    "tagline": "",
     "backToTop": "Nach oben",
     "rights": "Alle Rechte vorbehalten."
   }
